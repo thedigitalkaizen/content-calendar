@@ -1,5 +1,5 @@
 {
- "_note": "AdKaizen content plan, Jan-Mar 2027. Checked against AdKaizen-content-log.csv: no topic or hook repeats December 2026 or the 60 drafts. Status 'To make' until the content is designed; make each month's content in the last week of the month before.",
+ "_note": "AdKaizen content plan for 2027. Checked against AdKaizen-content-log.csv so topics and hooks don't repeat. Everything is 'To make' until designed; make each month's content in the last week of the month before. Greeting dates marked 'check the date' depend on the calendar or moon sighting.",
  "months": [
   {
    "id": "2027-01",
@@ -156,6 +156,11 @@
      "Poll: what should we cover in February?",
      "Pick February's topic: Ramadan ads or Valentine's ads?"
     ]
+   ],
+   "keydates": [
+    "1 Jan: New Year",
+    "26 Jan: Republic Day (India)",
+    "September 2027 intake research starts"
    ]
   },
   {
@@ -313,6 +318,10 @@
      "Poll: Reel or carousel next week?",
      "What do you want next week: a Reel or a carousel?"
     ]
+   ],
+   "keydates": [
+    "Ramadan expected to begin around 8 Feb (moon sighting)",
+    "14 Feb: Valentine's Day"
    ]
   },
   {
@@ -482,6 +491,1457 @@
      "What to plan for Q2",
      "Q2 plan in five lines. Here's how we write ours."
     ]
+   ],
+   "keydates": [
+    "Eid al-Fitr expected around 9-10 Mar (moon sighting)",
+    "31 Mar: India financial year ends"
+   ]
+  },
+  {
+   "id": "2027-04",
+   "name": "April 2027",
+   "theme": "New financial year in India, summer intake and summer travel planning",
+   "items": [
+    [
+     "2027-04-01",
+     "reel",
+     "Set a monthly test budget",
+     "New financial year. Set aside a small budget just for testing."
+    ],
+    [
+     "2027-04-03",
+     "static",
+     "Myth vs fact: you need a big budget to start",
+     "Myth: you need a big budget before ads can work."
+    ],
+    [
+     "2027-04-04",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-04-05",
+     "carousel",
+     "Summer intake checklist for education brands",
+     "Summer intake: 6 things to set up in your ads now."
+    ],
+    [
+     "2027-04-06",
+     "reel",
+     "One audience, three messages",
+     "Same audience, three messages. Let the results pick the winner."
+    ],
+    [
+     "2027-04-07",
+     "li",
+     "What a new financial year means for your ad budget",
+     "New financial year, same old ad budget? Rethink it."
+    ],
+    [
+     "2027-04-08",
+     "reel",
+     "Summer travel ads: sell the arrival",
+     "Summer travel ads: sell the moment they arrive, not the flight."
+    ],
+    [
+     "2027-04-11",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-04-12",
+     "carousel",
+     "8 ad ideas for travel brands this summer",
+     "Running out of travel ad ideas? Here are 8."
+    ],
+    [
+     "2027-04-13",
+     "reel",
+     "Study abroad: talk to the parents too",
+     "In study abroad, a parent often decides. Are your ads talking to them?"
+    ],
+    [
+     "2027-04-14",
+     "li",
+     "Why an audit should come before new ads",
+     "Before you make new ads, find out what the old ones taught you."
+    ],
+    [
+     "2027-04-14",
+     "static",
+     "Baisakhi greeting",
+     "Happy Baisakhi from AdKaizen. Check the date and post on the day."
+    ],
+    [
+     "2027-04-17",
+     "static",
+     "Ad words explained: impressions vs reach",
+     "Impressions or reach? One picture, two numbers."
+    ],
+    [
+     "2027-04-18",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-04-19",
+     "carousel",
+     "How to write a headline people read",
+     "Your headline gets one second. Make it count."
+    ],
+    [
+     "2027-04-20",
+     "reel",
+     "Why results drop when you double the budget",
+     "Doubled your budget and results dropped? Here's why."
+    ],
+    [
+     "2027-04-21",
+     "li",
+     "The parent factor in study abroad marketing",
+     "In study abroad, you're often selling to two people at once."
+    ],
+    [
+     "2027-04-22",
+     "reel",
+     "Give each ad one job",
+     "An ad that tries to do everything does nothing. Give it one job."
+    ],
+    [
+     "2027-04-24",
+     "static",
+     "This or that: discount or free bonus?",
+     "Discount or free bonus: which would make you buy?"
+    ],
+    [
+     "2027-04-25",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-04-26",
+     "carousel",
+     "5 before-and-after ad rewrites",
+     "Same offer, better words: 5 before-and-after ad rewrites."
+    ],
+    [
+     "2027-04-27",
+     "reel",
+     "Turn your FAQs into ads",
+     "Your most-asked questions are your best ad ideas."
+    ],
+    [
+     "2027-04-28",
+     "li",
+     "Ad goals your team can actually check",
+     "If your ad goal can't be checked weekly, it isn't a goal."
+    ],
+    [
+     "2027-04-29",
+     "reel",
+     "Run ads when your team can answer",
+     "If nobody answers at midnight, should your ads run at midnight?"
+    ]
+   ],
+   "keydates": [
+    "1 Apr: new financial year (India)",
+    "Mid-April: Baisakhi",
+    "Summer travel and summer intake planning"
+   ]
+  },
+  {
+   "id": "2027-05",
+   "name": "May 2027",
+   "theme": "Mother's Day, Eid al-Adha and results season",
+   "items": [
+    [
+     "2027-05-01",
+     "static",
+     "Myth vs fact: likes mean the ad is working",
+     "Myth: lots of likes means the ad is working."
+    ],
+    [
+     "2027-05-02",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-05-03",
+     "carousel",
+     "Eid al-Adha campaign plan",
+     "Eid al-Adha campaign plan, from today to Eid."
+    ],
+    [
+     "2027-05-04",
+     "reel",
+     "Eid al-Adha holidays: travel ads that book early",
+     "Eid al-Adha holidays are short. People book early. Be there first."
+    ],
+    [
+     "2027-05-05",
+     "li",
+     "Planning around short GCC holidays",
+     "Short holidays change how people book. Plan for it."
+    ],
+    [
+     "2027-05-06",
+     "reel",
+     "Mother's Day ads for food brands",
+     "Mother's Day ads: make it about her, not your product."
+    ],
+    [
+     "2027-05-09",
+     "static",
+     "Mother's Day greeting",
+     "Happy Mother's Day from AdKaizen."
+    ],
+    [
+     "2027-05-09",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-05-10",
+     "carousel",
+     "7 Mother's Day ad ideas that aren't a discount",
+     "7 Mother's Day ad ideas that aren't just a discount."
+    ],
+    [
+     "2027-05-11",
+     "reel",
+     "Results week: study abroad ads",
+     "Results day is when students ask 'what next?' Be the answer."
+    ],
+    [
+     "2027-05-12",
+     "li",
+     "Why likes are the wrong goal",
+     "Likes feel good. They rarely pay the bills."
+    ],
+    [
+     "2027-05-13",
+     "reel",
+     "Testimonials that sound real",
+     "A real customer's words beat your best copy."
+    ],
+    [
+     "2027-05-16",
+     "static",
+     "Eid al-Adha greeting",
+     "Eid al-Adha Mubarak from AdKaizen. Post on Eid day."
+    ],
+    [
+     "2027-05-16",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-05-17",
+     "carousel",
+     "Results season playbook for education brands",
+     "Results season: what education brands should run, week by week."
+    ],
+    [
+     "2027-05-18",
+     "reel",
+     "Write your first line three ways",
+     "Your first line decides if anyone reads the rest. Write it three ways."
+    ],
+    [
+     "2027-05-19",
+     "li",
+     "Arabic and English ads: what to test first",
+     "Two languages, one market. Here's what to test first."
+    ],
+    [
+     "2027-05-20",
+     "reel",
+     "Your Instagram profile is a landing page",
+     "People check your profile before they message. Is it ready?"
+    ],
+    [
+     "2027-05-22",
+     "static",
+     "Ad words explained: hook, CTA, creative",
+     "Hook, CTA, creative: the three parts of every ad."
+    ],
+    [
+     "2027-05-23",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-05-24",
+     "carousel",
+     "How to brief a video editor for ads",
+     "Briefing an editor for ad videos? Use these 6 points."
+    ],
+    [
+     "2027-05-25",
+     "reel",
+     "Arabic and English ads in the GCC",
+     "Selling in the GCC? Test your ad in Arabic and English."
+    ],
+    [
+     "2027-05-26",
+     "li",
+     "Planning an education brand's results season",
+     "Results season lasts weeks, not days. Plan it that way."
+    ],
+    [
+     "2027-05-27",
+     "reel",
+     "Use a countdown for real deadlines",
+     "Real deadline coming? Show the countdown."
+    ],
+    [
+     "2027-05-29",
+     "static",
+     "What people see in your ad's first 3 seconds",
+     "Pause your ad at 3 seconds. Is the point clear?"
+    ]
+   ],
+   "keydates": [
+    "9 May: Mother's Day",
+    "Eid al-Adha expected around 16 May (moon sighting)",
+    "India board results season"
+   ]
+  },
+  {
+   "id": "2027-06",
+   "name": "June 2027",
+   "theme": "Summer holidays, Father's Day and the September intake push",
+   "items": [
+    [
+     "2027-06-01",
+     "reel",
+     "Summer can be your busy season",
+     "Some businesses slow down in summer. Yours might be the opposite."
+    ],
+    [
+     "2027-06-02",
+     "li",
+     "What a mid-year review should change",
+     "A mid-year review should change one or two things, not everything."
+    ],
+    [
+     "2027-06-03",
+     "reel",
+     "Father's Day ads for food and gifting",
+     "Father's Day ads: show the moment, not the product."
+    ],
+    [
+     "2027-06-05",
+     "static",
+     "Myth vs fact: you need a professional video",
+     "Myth: ads only work with a professional video."
+    ],
+    [
+     "2027-06-06",
+     "static",
+     "Islamic New Year greeting",
+     "Happy Islamic New Year from AdKaizen. Check the date and post on the day."
+    ],
+    [
+     "2027-06-06",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-06-07",
+     "carousel",
+     "Summer menu ads for food brands",
+     "Summer menu? Here's how to advertise it."
+    ],
+    [
+     "2027-06-08",
+     "reel",
+     "September intake: deadline ads",
+     "September intake is close. Your ads should now talk about deadlines."
+    ],
+    [
+     "2027-06-09",
+     "li",
+     "Trust beats reach in study abroad",
+     "In study abroad, trust does more than reach."
+    ],
+    [
+     "2027-06-10",
+     "reel",
+     "Show the counsellor, not the campus",
+     "Students trust people. Show the counsellor, not just the campus."
+    ],
+    [
+     "2027-06-12",
+     "static",
+     "Ad words explained: custom, lookalike, broad",
+     "Custom, lookalike, broad: three audiences, explained."
+    ],
+    [
+     "2027-06-13",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-06-14",
+     "carousel",
+     "6 customer doubts and how to answer them",
+     "6 doubts your customers have, and how to answer them in ads."
+    ],
+    [
+     "2027-06-17",
+     "reel",
+     "GCC summer: reach people before they fly",
+     "Many GCC families travel in summer. Reach them before they fly."
+    ],
+    [
+     "2027-06-20",
+     "static",
+     "Father's Day greeting",
+     "Happy Father's Day from AdKaizen."
+    ],
+    [
+     "2027-06-20",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-06-21",
+     "carousel",
+     "September intake countdown plan",
+     "September intake countdown: what to run each week."
+    ],
+    [
+     "2027-06-22",
+     "reel",
+     "Make your next ad on your phone",
+     "Your next ad can be a 10-second phone video."
+    ],
+    [
+     "2027-06-23",
+     "li",
+     "Phone videos vs polished ads",
+     "Phone video or studio ad? Test before you spend on production."
+    ],
+    [
+     "2027-06-24",
+     "reel",
+     "Answer the buyer's doubt in the ad",
+     "Every buyer has one doubt. Answer it in the ad."
+    ],
+    [
+     "2027-06-26",
+     "static",
+     "Half the year is done: one question",
+     "Half of 2027 is done. What has your ad account taught you?"
+    ],
+    [
+     "2027-06-27",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-06-28",
+     "carousel",
+     "Phone video ad shot list",
+     "Shoot a week of ads on your phone: the shot list."
+    ],
+    [
+     "2027-06-29",
+     "reel",
+     "Warm them up, then ask",
+     "Don't ask for the sale in the first ad. Warm them up first."
+    ],
+    [
+     "2027-06-30",
+     "li",
+     "Planning ads around GCC summer travel",
+     "When your customers travel, your ads should change too."
+    ]
+   ],
+   "keydates": [
+    "Islamic New Year expected around 6 Jun",
+    "20 Jun: Father's Day",
+    "GCC summer holidays begin"
+   ]
+  },
+  {
+   "id": "2027-07",
+   "name": "July 2027",
+   "theme": "Monsoon in India, the second half of the year and the January 2028 intake",
+   "items": [
+    [
+     "2027-07-01",
+     "reel",
+     "Monsoon food ads: comfort sells",
+     "It's raining. People want comfort food. Show it."
+    ],
+    [
+     "2027-07-03",
+     "static",
+     "Myth vs fact: one viral post will fix sales",
+     "Myth: one viral post will fix your sales."
+    ],
+    [
+     "2027-07-04",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-07-05",
+     "carousel",
+     "5 Meta ad rules that get ads rejected",
+     "5 Meta ad rules that get ads rejected."
+    ],
+    [
+     "2027-07-06",
+     "reel",
+     "Missed September? January intake ads",
+     "Missed September? Your January intake ads should say so."
+    ],
+    [
+     "2027-07-07",
+     "li",
+     "How to keep your ad account safe",
+     "Losing an ad account costs more than any bad ad."
+    ],
+    [
+     "2027-07-08",
+     "reel",
+     "Test an ad with a real person",
+     "Ads with a real person can feel more trustworthy. Test one."
+    ],
+    [
+     "2027-07-10",
+     "static",
+     "Ad words explained: pixel, event, dataset",
+     "Pixel, event, dataset: how Meta knows what happened."
+    ],
+    [
+     "2027-07-11",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-07-12",
+     "carousel",
+     "The next 6 months of ads on one page",
+     "Plan the next 6 months of ads on one page."
+    ],
+    [
+     "2027-07-13",
+     "reel",
+     "What to do when an ad is rejected",
+     "Ad rejected by Meta? Don't panic. Do this."
+    ],
+    [
+     "2027-07-14",
+     "li",
+     "Planning the second half of the year",
+     "Six months left. What will you test?"
+    ],
+    [
+     "2027-07-17",
+     "static",
+     "Rainy day idea for food brands",
+     "Rain outside? A simple ad idea for food brands."
+    ],
+    [
+     "2027-07-18",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-07-19",
+     "carousel",
+     "The 6 steps from first ad to admission",
+     "From first ad to admission: the 6 steps a student takes."
+    ],
+    [
+     "2027-07-20",
+     "reel",
+     "Protect your ad account",
+     "Protect your ad account before it gets restricted."
+    ],
+    [
+     "2027-07-21",
+     "li",
+     "Why people trust faces",
+     "People buy from people. Even online."
+    ],
+    [
+     "2027-07-22",
+     "reel",
+     "Bundles for food brands",
+     "Food brands: a bundle can beat a discount."
+    ],
+    [
+     "2027-07-24",
+     "static",
+     "Checklist: before you scale an ad",
+     "Before you scale an ad, tick these 5 boxes."
+    ],
+    [
+     "2027-07-25",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-07-26",
+     "carousel",
+     "Set up a WhatsApp catalogue",
+     "Selling on WhatsApp? Set up your catalogue in 6 steps."
+    ],
+    [
+     "2027-07-27",
+     "reel",
+     "Make your ads look like Reels",
+     "Your ads look like ads. Make them look like Reels."
+    ],
+    [
+     "2027-07-28",
+     "li",
+     "What WhatsApp selling needs behind the ads",
+     "WhatsApp ads only work if someone answers well."
+    ],
+    [
+     "2027-07-29",
+     "reel",
+     "Write ads like you talk",
+     "Write your ad like you'd say it out loud."
+    ],
+    [
+     "2027-07-31",
+     "static",
+     "July recap",
+     "Missed a post? Here's July in one image."
+    ]
+   ],
+   "keydates": [
+    "Monsoon season in India",
+    "Second half of the year starts",
+    "January 2028 intake research begins"
+   ]
+  },
+  {
+   "id": "2027-08",
+   "name": "August 2027",
+   "theme": "India's Independence Day, back-to-school and the festive season run-up",
+   "items": [
+    [
+     "2027-08-01",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-08-02",
+     "carousel",
+     "Festive ad calendar: August to November",
+     "Festive season ad calendar: August to November."
+    ],
+    [
+     "2027-08-03",
+     "reel",
+     "Plan festive ads in August",
+     "Diwali ads planned in October are late. Start in August."
+    ],
+    [
+     "2027-08-04",
+     "li",
+     "Festive planning for D2C brands",
+     "Festive season is won in August."
+    ],
+    [
+     "2027-08-05",
+     "reel",
+     "Independence Day sales that stand out",
+     "Every brand runs a freedom sale. Here's how to stand out."
+    ],
+    [
+     "2027-08-07",
+     "static",
+     "Myth vs fact: festive ads only need a discount",
+     "Myth: festive ads only need a big discount."
+    ],
+    [
+     "2027-08-08",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-08-09",
+     "carousel",
+     "5 ad formats for gift guides",
+     "Gifting season: 5 ad formats that work for gift guides."
+    ],
+    [
+     "2027-08-10",
+     "reel",
+     "Raksha Bandhan gifting ads",
+     "Raksha Bandhan gifting ads: sell the bond, not the box."
+    ],
+    [
+     "2027-08-11",
+     "li",
+     "Why August matters for the last quarter",
+     "Your October results are decided in August."
+    ],
+    [
+     "2027-08-12",
+     "reel",
+     "Build festive audiences now",
+     "Build your festive audiences in August, not October."
+    ],
+    [
+     "2027-08-14",
+     "static",
+     "Ad words explained: campaign budget vs ad set budget",
+     "Campaign budget or ad set budget? Explained simply."
+    ],
+    [
+     "2027-08-15",
+     "static",
+     "Independence Day greeting",
+     "Happy Independence Day from AdKaizen."
+    ],
+    [
+     "2027-08-15",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-08-16",
+     "carousel",
+     "Back-to-school plan for education brands",
+     "Back-to-school campaign plan, week by week."
+    ],
+    [
+     "2027-08-18",
+     "li",
+     "How parents research education online",
+     "Parents research differently from students. Plan for both."
+    ],
+    [
+     "2027-08-19",
+     "reel",
+     "Test festive ideas before the rush",
+     "Test festive ad ideas now, before the rush."
+    ],
+    [
+     "2027-08-21",
+     "static",
+     "Festive season starts in your ad account",
+     "Festive season doesn't start on the festival. It starts now."
+    ],
+    [
+     "2027-08-22",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-08-23",
+     "carousel",
+     "Name your campaigns like this",
+     "Messy ad account? Name your campaigns like this."
+    ],
+    [
+     "2027-08-24",
+     "reel",
+     "Back-to-school ads for education brands",
+     "Back to school means parents are planning. Speak to them."
+    ],
+    [
+     "2027-08-25",
+     "li",
+     "Campaign naming: a small habit",
+     "Campaign names: a small habit that saves hours."
+    ],
+    [
+     "2027-08-26",
+     "reel",
+     "Your ad button changes who replies",
+     "'Learn more' or 'Send message'? Your button changes who replies."
+    ],
+    [
+     "2027-08-28",
+     "static",
+     "August recap",
+     "Missed a post? Here's August in one image."
+    ],
+    [
+     "2027-08-31",
+     "reel",
+     "Build your own contact list",
+     "Build your own contact list before festive ads get busy."
+    ]
+   ],
+   "keydates": [
+    "15 Aug: Independence Day (India)",
+    "Raksha Bandhan (August)",
+    "Festive season planning starts"
+   ]
+  },
+  {
+   "id": "2027-09",
+   "name": "September 2027",
+   "theme": "September intake, Saudi National Day and festive preparation",
+   "items": [
+    [
+     "2027-09-01",
+     "li",
+     "Marketing to students who just enrolled",
+     "Your newest students can bring your next ones."
+    ],
+    [
+     "2027-09-02",
+     "reel",
+     "Saudi National Day ads",
+     "Saudi National Day: show you understand the moment."
+    ],
+    [
+     "2027-09-04",
+     "static",
+     "Myth vs fact: more ads means more sales",
+     "Myth: more ads always means more sales."
+    ],
+    [
+     "2027-09-05",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-09-06",
+     "carousel",
+     "Saudi National Day: do's and don'ts",
+     "Saudi National Day ads: 5 do's and 5 don'ts."
+    ],
+    [
+     "2027-09-07",
+     "reel",
+     "Navratri food ads",
+     "Navratri food ads: festive, fresh and fasting-friendly."
+    ],
+    [
+     "2027-09-08",
+     "li",
+     "Pacing a festive budget",
+     "A festive budget is a marathon, not a sprint."
+    ],
+    [
+     "2027-09-09",
+     "reel",
+     "Turn new students into your next ads",
+     "Your new students are your best ad. Ask for their story."
+    ],
+    [
+     "2027-09-11",
+     "static",
+     "Ad words explained: placements, Advantage+, reach",
+     "Placements, Advantage+, reach: explained simply."
+    ],
+    [
+     "2027-09-12",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-09-13",
+     "carousel",
+     "Student story ad template",
+     "Turn one student's story into an ad: the template."
+    ],
+    [
+     "2027-09-14",
+     "reel",
+     "One festive idea, every size",
+     "One festive idea. Every size. Here's how."
+    ],
+    [
+     "2027-09-18",
+     "static",
+     "Pin your best comment",
+     "Your best comment is free proof. Pin it."
+    ],
+    [
+     "2027-09-19",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-09-20",
+     "carousel",
+     "Festive ad sizes cheat sheet",
+     "Every ad size you need for festive season, on one page."
+    ],
+    [
+     "2027-09-21",
+     "reel",
+     "Test your offer before you scale",
+     "Before festive season, test which offer people want."
+    ],
+    [
+     "2027-09-22",
+     "li",
+     "Getting cultural moments right in the GCC",
+     "National days are about pride. Your ads should feel it."
+    ],
+    [
+     "2027-09-23",
+     "reel",
+     "Pin good comments as proof",
+     "Good comments under your ad are free proof. Pin them."
+    ],
+    [
+     "2027-09-23",
+     "static",
+     "Saudi National Day greeting",
+     "Happy Saudi National Day from AdKaizen."
+    ],
+    [
+     "2027-09-25",
+     "static",
+     "Festive readiness checklist",
+     "Festive season: are your ads ready? Tick these off."
+    ],
+    [
+     "2027-09-26",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-09-27",
+     "carousel",
+     "Festive budget, week by week",
+     "Pace your festive budget week by week."
+    ],
+    [
+     "2027-09-28",
+     "reel",
+     "Write for people who skim",
+     "Most people skim your ad. Write for them."
+    ],
+    [
+     "2027-09-29",
+     "li",
+     "Offers matter more than ads in festive season",
+     "In festive season, the offer does the heavy lifting."
+    ],
+    [
+     "2027-09-30",
+     "reel",
+     "Don't spend your festive budget in week one",
+     "Don't spend your festive budget in week one."
+    ]
+   ],
+   "keydates": [
+    "September intake starts",
+    "23 Sep: Saudi National Day",
+    "Navratri (late Sep / Oct)"
+   ]
+  },
+  {
+   "id": "2027-10",
+   "name": "October 2027",
+   "theme": "Navratri, Dussehra and Diwali, plus the start of winter travel season",
+   "items": [
+    [
+     "2027-10-02",
+     "static",
+     "Myth vs fact: post at the same time as everyone",
+     "Myth: you should post when everyone else does."
+    ],
+    [
+     "2027-10-03",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-10-04",
+     "carousel",
+     "Corporate gifting ad plan",
+     "Corporate gifting season: the ad plan."
+    ],
+    [
+     "2027-10-05",
+     "reel",
+     "Corporate Diwali gifting ads",
+     "Corporate Diwali gifting: your B2B ad opportunity."
+    ],
+    [
+     "2027-10-06",
+     "li",
+     "B2B gifting: a quiet festive opportunity",
+     "Businesses buy gifts too. Most brands forget to ask."
+    ],
+    [
+     "2027-10-07",
+     "reel",
+     "Dussehra: one day, one offer",
+     "Dussehra is one day. Make one clear offer."
+    ],
+    [
+     "2027-10-09",
+     "static",
+     "Navratri greeting",
+     "Happy Navratri from AdKaizen. Check the date and post on the first day."
+    ],
+    [
+     "2027-10-10",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-10-11",
+     "carousel",
+     "Diwali campaign checklist",
+     "Diwali campaign checklist: 8 things to check."
+    ],
+    [
+     "2027-10-12",
+     "reel",
+     "Winter Umrah: early-bird dates",
+     "Winter Umrah buyers plan early. Show early-bird dates now."
+    ],
+    [
+     "2027-10-13",
+     "li",
+     "What to measure after a festive campaign",
+     "The festival is over. Now measure these 4 things."
+    ],
+    [
+     "2027-10-14",
+     "reel",
+     "Festive ads: show people together",
+     "Festive ads that show people together feel like the festival."
+    ],
+    [
+     "2027-10-16",
+     "static",
+     "Dussehra greeting",
+     "Happy Dussehra from AdKaizen. Check the date and post on the day."
+    ],
+    [
+     "2027-10-17",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-10-18",
+     "carousel",
+     "Winter travel ad plan: October to January",
+     "Winter travel ads: what to run from October to January."
+    ],
+    [
+     "2027-10-19",
+     "reel",
+     "Diwali food orders need a deadline",
+     "Diwali orders need a deadline. Put it in the ad."
+    ],
+    [
+     "2027-10-20",
+     "li",
+     "Winter travel planning starts in October",
+     "Winter trips are planned in October."
+    ],
+    [
+     "2027-10-21",
+     "reel",
+     "WhatsApp broadcasts after ads",
+     "Ads bring them in. WhatsApp broadcasts bring them back."
+    ],
+    [
+     "2027-10-23",
+     "static",
+     "Festive ad do's and don'ts",
+     "Festive ads: 3 do's and 3 don'ts."
+    ],
+    [
+     "2027-10-24",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-10-25",
+     "carousel",
+     "WhatsApp broadcast templates",
+     "5 WhatsApp broadcast messages that don't feel like spam."
+    ],
+    [
+     "2027-10-26",
+     "reel",
+     "Story ads: big words, one action",
+     "Story ads: big words, one action, done in 5 seconds."
+    ],
+    [
+     "2027-10-27",
+     "li",
+     "The follow-up system behind your ads",
+     "Ads start the conversation. Your follow-up finishes it."
+    ],
+    [
+     "2027-10-28",
+     "reel",
+     "The week after Diwali",
+     "Diwali is done. Here's what to run the week after."
+    ],
+    [
+     "2027-10-29",
+     "static",
+     "Diwali greeting",
+     "Happy Diwali from AdKaizen. Check the date and post on the day."
+    ]
+   ],
+   "keydates": [
+    "Navratri and Dussehra",
+    "Diwali expected 29 Oct (check the date)",
+    "Winter Umrah and travel season begins"
+   ]
+  },
+  {
+   "id": "2027-11",
+   "name": "November 2027",
+   "theme": "Black Friday, after Diwali and year-end planning",
+   "items": [
+    [
+     "2027-11-01",
+     "carousel",
+     "Black Friday ad plan for small brands",
+     "Black Friday plan for small brands, step by step."
+    ],
+    [
+     "2027-11-02",
+     "reel",
+     "Black Friday for small brands",
+     "Small brand on Black Friday? Don't fight on price. Give a reason."
+    ],
+    [
+     "2027-11-03",
+     "li",
+     "Black Friday for service businesses",
+     "Black Friday isn't only for shops."
+    ],
+    [
+     "2027-11-04",
+     "reel",
+     "Black Friday starts in early November",
+     "Black Friday starts in early November, in your ad account."
+    ],
+    [
+     "2027-11-06",
+     "static",
+     "Myth vs fact: Black Friday is only for big brands",
+     "Myth: Black Friday is only for big brands."
+    ],
+    [
+     "2027-11-07",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-11-08",
+     "carousel",
+     "Holiday gift voucher ad ideas",
+     "6 ways to advertise gift vouchers this holiday season."
+    ],
+    [
+     "2027-11-09",
+     "reel",
+     "Thank customers after Diwali",
+     "Diwali's over. Thank your customers before you sell again."
+    ],
+    [
+     "2027-11-10",
+     "li",
+     "Long sales cycles need patient ads",
+     "If customers take months to decide, your ads need patience."
+    ],
+    [
+     "2027-11-11",
+     "reel",
+     "Keep a 'what worked' document",
+     "Keep one document of everything that worked. Next year's you will thank you."
+    ],
+    [
+     "2027-11-13",
+     "static",
+     "Ad words explained: repeat purchase and lifetime value",
+     "Repeat purchase and lifetime value, explained."
+    ],
+    [
+     "2027-11-14",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-11-15",
+     "carousel",
+     "Study abroad follow-up plan: 6 touches",
+     "Six ways to stay in touch while a student decides."
+    ],
+    [
+     "2027-11-17",
+     "li",
+     "Write down what worked this year",
+     "Before the year ends, write down what worked."
+    ],
+    [
+     "2027-11-18",
+     "reel",
+     "Gift vouchers for food brands",
+     "Food brands: sell gift vouchers for the holidays."
+    ],
+    [
+     "2027-11-20",
+     "static",
+     "Sound off? Captions on.",
+     "Sound off? Captions on."
+    ],
+    [
+     "2027-11-21",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-11-22",
+     "carousel",
+     "'What worked' document template",
+     "Copy this template and fill it in before December."
+    ],
+    [
+     "2027-11-23",
+     "reel",
+     "Study abroad decisions take months",
+     "Study abroad decisions take months. Your ads should stay in touch."
+    ],
+    [
+     "2027-11-24",
+     "li",
+     "Planning next year's ad calendar",
+     "Next year's ad calendar, planned in one afternoon."
+    ],
+    [
+     "2027-11-25",
+     "reel",
+     "Add captions for sound-off viewers",
+     "Many people watch with the sound off. Add captions."
+    ],
+    [
+     "2027-11-26",
+     "static",
+     "Black Friday: one tip",
+     "Black Friday tip: give people a reason, not just a price."
+    ],
+    [
+     "2027-11-28",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-11-30",
+     "reel",
+     "Cyber Monday: a second chance",
+     "Missed Black Friday? Cyber Monday is your second chance."
+    ]
+   ],
+   "keydates": [
+    "26 Nov: Black Friday",
+    "29 Nov: Cyber Monday",
+    "Year-end planning"
+   ]
+  },
+  {
+   "id": "2027-12",
+   "name": "December 2027",
+   "theme": "UAE National Day, year-end reviews and planning 2028",
+   "items": [
+    [
+     "2027-12-01",
+     "li",
+     "What a year of weekly testing should teach you",
+     "Fifty-two weeks. Fifty-two chances to learn."
+    ],
+    [
+     "2027-12-02",
+     "reel",
+     "2027 in five ad lessons",
+     "Five ad lessons from 2027, in 30 seconds."
+    ],
+    [
+     "2027-12-02",
+     "static",
+     "UAE National Day greeting",
+     "Happy UAE National Day from AdKaizen."
+    ],
+    [
+     "2027-12-05",
+     "story",
+     "Poll: which of this month's topics helped most?",
+     "Poll: which of this month's topics helped most?"
+    ],
+    [
+     "2027-12-06",
+     "carousel",
+     "2027 recap: our 12 favourite tips",
+     "A year of ad tips: our 12 favourites."
+    ],
+    [
+     "2027-12-07",
+     "reel",
+     "UAE National Day: celebrate, don't just sell",
+     "UAE National Day: celebrate with people, don't just sell to them."
+    ],
+    [
+     "2027-12-08",
+     "li",
+     "Year-end reporting that helps next year",
+     "A year-end report should plan next year, not just look back."
+    ],
+    [
+     "2027-12-09",
+     "reel",
+     "Year-end clearance ads",
+     "Year-end clearance? Say what's on sale and until when."
+    ],
+    [
+     "2027-12-11",
+     "static",
+     "Myth vs fact: December is a dead month",
+     "Myth: December is a dead month for ads."
+    ],
+    [
+     "2027-12-12",
+     "story",
+     "Quiz: one question from this month's posts",
+     "Quiz: one question from this month's posts"
+    ],
+    [
+     "2027-12-13",
+     "carousel",
+     "Event and webinar ad plan",
+     "Filling an event with ads: the 3-week plan."
+    ],
+    [
+     "2027-12-14",
+     "reel",
+     "Set up your 2028 report now",
+     "New year, new report. Set it up before January."
+    ],
+    [
+     "2027-12-18",
+     "static",
+     "Qatar National Day greeting",
+     "Happy Qatar National Day from AdKaizen."
+    ],
+    [
+     "2027-12-19",
+     "story",
+     "Question box: ask us anything about ads",
+     "Question box: ask us anything about ads"
+    ],
+    [
+     "2027-12-20",
+     "carousel",
+     "Year-end clearance ad plan",
+     "Year-end clearance: the ad plan."
+    ],
+    [
+     "2027-12-21",
+     "reel",
+     "Christmas for food brands: sell the party",
+     "Christmas party orders: sell the party, not the menu."
+    ],
+    [
+     "2027-12-22",
+     "li",
+     "How to run education events that fill",
+     "Education events fill up with the right ads."
+    ],
+    [
+     "2027-12-23",
+     "reel",
+     "Ask followers what they want in 2028",
+     "Ask your followers what they want next year. Then make it."
+    ],
+    [
+     "2027-12-25",
+     "static",
+     "Christmas greeting",
+     "Merry Christmas from AdKaizen."
+    ],
+    [
+     "2027-12-26",
+     "story",
+     "This or that: which ad would you click?",
+     "This or that: which ad would you click?"
+    ],
+    [
+     "2027-12-27",
+     "carousel",
+     "2028 content calendar template",
+     "Plan 2028 content with this simple template."
+    ],
+    [
+     "2027-12-28",
+     "reel",
+     "Fill your education fair or webinar",
+     "Running an education fair or webinar? Here's how to fill it."
+    ],
+    [
+     "2027-12-29",
+     "li",
+     "What to plan before January",
+     "Plan these three things before January."
+    ],
+    [
+     "2027-12-30",
+     "reel",
+     "Archive old ads, don't delete them",
+     "Don't delete old ads. Archive them. Here's why."
+    ],
+    [
+     "2027-12-31",
+     "static",
+     "Happy New Year 2028",
+     "Happy New Year 2028 from AdKaizen."
+    ]
+   ],
+   "keydates": [
+    "2 Dec: UAE National Day",
+    "18 Dec: Qatar National Day",
+    "25 Dec: Christmas",
+    "31 Dec: New Year's Eve"
    ]
   }
  ]
