@@ -1,0 +1,488 @@
+{
+ "_note": "AdKaizen content plan, Jan-Mar 2027. Checked against AdKaizen-content-log.csv: no topic or hook repeats December 2026 or the 60 drafts. Status 'To make' until the content is designed; make each month's content in the last week of the month before.",
+ "months": [
+  {
+   "id": "2027-01",
+   "name": "January 2027",
+   "theme": "Start the year right: budgets, retargeting and the September study intake",
+   "items": [
+    [
+     "2027-01-04",
+     "carousel",
+     "2027 ad account setup checklist",
+     "New year, clean account: 7 things to set up before you spend."
+    ],
+    [
+     "2027-01-05",
+     "reel",
+     "Split your 2027 ad budget into 3 buckets",
+     "Don't put your whole ad budget in one pot. Split it three ways."
+    ],
+    [
+     "2027-01-06",
+     "li",
+     "Why we report every week, not every month",
+     "A monthly report tells you what went wrong 30 days too late."
+    ],
+    [
+     "2027-01-07",
+     "reel",
+     "Check where your ads actually show",
+     "Your ads might be running in apps you've never heard of."
+    ],
+    [
+     "2027-01-09",
+     "static",
+     "Myth vs fact: more budget fixes bad ads",
+     "Myth: a bigger budget will fix a weak ad."
+    ],
+    [
+     "2027-01-10",
+     "story",
+     "Poll: your main ad goal for 2027",
+     "Leads, sales or messages: what do you want most from ads this year?"
+    ],
+    [
+     "2027-01-11",
+     "carousel",
+     "What to send your agency before day one",
+     "Want better results from your agency? Send them these 6 things first."
+    ],
+    [
+     "2027-01-12",
+     "reel",
+     "Retargeting in plain English",
+     "Most people won't buy the first time they see you. Here's how to show up again."
+    ],
+    [
+     "2027-01-13",
+     "li",
+     "The first question we ask every new client",
+     "Before we touch an ad account, we ask one question."
+    ],
+    [
+     "2027-01-14",
+     "reel",
+     "Study abroad: September 2027 intake ads",
+     "Students planning September 2027 are researching now. Are your ads on?"
+    ],
+    [
+     "2027-01-16",
+     "static",
+     "Ad words explained: CPM, CPC, CPL",
+     "CPM, CPC, CPL: three numbers, explained in one image."
+    ],
+    [
+     "2027-01-17",
+     "story",
+     "Quiz: what does CPL mean?",
+     "Quick quiz: what does CPL stand for?"
+    ],
+    [
+     "2027-01-18",
+     "carousel",
+     "6 retargeting audiences to build this week",
+     "Build these 6 audiences once and use them all year."
+    ],
+    [
+     "2027-01-19",
+     "reel",
+     "Stop editing your ads every day",
+     "Changing your ads every day can make them worse. Here's why."
+    ],
+    [
+     "2027-01-20",
+     "li",
+     "3 common mistakes in study abroad ads",
+     "Study abroad ads lose leads in the same three places."
+    ],
+    [
+     "2027-01-21",
+     "reel",
+     "Food ads: show it being eaten",
+     "Food brands: stop showing the packet. Show someone enjoying it."
+    ],
+    [
+     "2027-01-23",
+     "static",
+     "Swipe file: save the ads you'd stop for",
+     "Start a swipe file: save every ad that makes you stop scrolling."
+    ],
+    [
+     "2027-01-24",
+     "story",
+     "Question box: your biggest ad question",
+     "Ask us anything about your ads. We'll answer in a Reel."
+    ],
+    [
+     "2027-01-25",
+     "carousel",
+     "Lead magnet ideas for study abroad, travel and food",
+     "Give people a reason to leave their number: 9 ideas."
+    ],
+    [
+     "2027-01-26",
+     "static",
+     "Republic Day greeting",
+     "Happy Republic Day from AdKaizen."
+    ],
+    [
+     "2027-01-26",
+     "reel",
+     "Click-to-WhatsApp ads vs lead forms",
+     "WhatsApp ads or lead forms? Here's when to use each."
+    ],
+    [
+     "2027-01-27",
+     "li",
+     "How to judge an agency in the first 30 days",
+     "You don't need 6 months to know if your agency is any good."
+    ],
+    [
+     "2027-01-28",
+     "reel",
+     "A better offer beats a better ad",
+     "A better offer beats a better ad. Every time."
+    ],
+    [
+     "2027-01-30",
+     "static",
+     "January recap: what we covered",
+     "Missed a post? Here's January in one image."
+    ],
+    [
+     "2027-01-31",
+     "story",
+     "Poll: what should we cover in February?",
+     "Pick February's topic: Ramadan ads or Valentine's ads?"
+    ]
+   ]
+  },
+  {
+   "id": "2027-02",
+   "name": "February 2027",
+   "theme": "Ramadan (expected to begin around 8 Feb, subject to moon sighting) and Valentine's Day",
+   "items": [
+    [
+     "2027-02-01",
+     "carousel",
+     "Ramadan ad plan: 4 weeks",
+     "Ramadan ad plan, week by week. Start before day one."
+    ],
+    [
+     "2027-02-02",
+     "reel",
+     "Start Ramadan ads before Ramadan",
+     "If your Ramadan ads start on day one, you're already late."
+    ],
+    [
+     "2027-02-03",
+     "li",
+     "How Ramadan changes ad planning for GCC brands",
+     "Ramadan isn't one month of the same ads. It's four different weeks."
+    ],
+    [
+     "2027-02-04",
+     "reel",
+     "Check when your leads come in during Ramadan",
+     "In Ramadan, people scroll at different hours. Check yours before you schedule."
+    ],
+    [
+     "2027-02-06",
+     "static",
+     "Myth vs fact: ads don't work for my business",
+     "Myth: 'Ads don't work for my kind of business.'"
+    ],
+    [
+     "2027-02-07",
+     "story",
+     "Poll: are you running Ramadan ads?",
+     "Running Ramadan ads this year? Yes / Not yet"
+    ],
+    [
+     "2027-02-08",
+     "static",
+     "Ramadan Kareem greeting",
+     "Ramadan Kareem from AdKaizen. Post on the first day of Ramadan."
+    ],
+    [
+     "2027-02-08",
+     "carousel",
+     "Ramadan creative: do's and don'ts",
+     "Ramadan ads: 5 do's and 5 don'ts."
+    ],
+    [
+     "2027-02-09",
+     "reel",
+     "Valentine's Day ads for food brands",
+     "Food brands: sell the Valentine's moment, not the discount."
+    ],
+    [
+     "2027-02-10",
+     "li",
+     "Why the first month is for learning",
+     "The first month of ads is for learning. Here's what we learn."
+    ],
+    [
+     "2027-02-11",
+     "reel",
+     "Customer-style videos for D2C brands",
+     "Let your customers sell for you: customer-style video ads."
+    ],
+    [
+     "2027-02-13",
+     "static",
+     "Ad words explained: CTR, frequency, ROAS",
+     "CTR, frequency, ROAS: three more numbers, explained."
+    ],
+    [
+     "2027-02-14",
+     "story",
+     "Quiz: what does ROAS mean?",
+     "Quick quiz: what does ROAS stand for?"
+    ],
+    [
+     "2027-02-15",
+     "carousel",
+     "Social proof ideas without fake numbers",
+     "No big numbers yet? 7 honest ways to show proof."
+    ],
+    [
+     "2027-02-16",
+     "reel",
+     "Short copy vs long copy",
+     "Short ad copy or long? Don't guess. Test both."
+    ],
+    [
+     "2027-02-17",
+     "li",
+     "Agency vs in-house: honest pros and cons",
+     "Agency or in-house team? Honest pros and cons of each."
+    ],
+    [
+     "2027-02-18",
+     "reel",
+     "Video or image: what to test first",
+     "Video ad or image ad? Here's which to test first."
+    ],
+    [
+     "2027-02-20",
+     "static",
+     "One ad, three hooks",
+     "Same ad, three different first lines. Which would you stop for?"
+    ],
+    [
+     "2027-02-21",
+     "story",
+     "Question box: Ramadan ad questions",
+     "Got a Ramadan ad question? Ask us here."
+    ],
+    [
+     "2027-02-22",
+     "carousel",
+     "Your Monday ad report in 10 minutes",
+     "Every Monday, check these 6 things. Takes 10 minutes."
+    ],
+    [
+     "2027-02-23",
+     "reel",
+     "How many ads should be in an ad set?",
+     "Too many ads in one ad set? Here's a simple rule."
+    ],
+    [
+     "2027-02-24",
+     "li",
+     "What a good ad brief looks like",
+     "A good ad brief fits on one page. Here's ours."
+    ],
+    [
+     "2027-02-25",
+     "reel",
+     "Turn comments into leads",
+     "People comment 'price?' and never get a reply. Turn comments into leads."
+    ],
+    [
+     "2027-02-27",
+     "static",
+     "Last 10 days of Ramadan: keep your best ads on",
+     "Last 10 days of Ramadan: keep your best ads running."
+    ],
+    [
+     "2027-02-28",
+     "story",
+     "Poll: Reel or carousel next week?",
+     "What do you want next week: a Reel or a carousel?"
+    ]
+   ]
+  },
+  {
+   "id": "2027-03",
+   "name": "March 2027",
+   "theme": "Eid al-Fitr (expected around 9-10 Mar, subject to moon sighting), India financial year end and Q2 planning",
+   "items": [
+    [
+     "2027-03-01",
+     "carousel",
+     "Eid campaign checklist",
+     "Eid campaign checklist: 8 things to set up this week."
+    ],
+    [
+     "2027-03-02",
+     "reel",
+     "Eid ads: start before the last 10 days",
+     "Eid shoppers decide early. Start before the last 10 days."
+    ],
+    [
+     "2027-03-03",
+     "li",
+     "Eid campaign planning for GCC brands",
+     "How we'd plan an Eid campaign, from today to Eid."
+    ],
+    [
+     "2027-03-04",
+     "reel",
+     "Eid gift and hamper ads for food brands",
+     "Food brands: Eid gifts sell on feeling. Show the table, not the box."
+    ],
+    [
+     "2027-03-06",
+     "static",
+     "Myth vs fact: tighter targeting is always better",
+     "Myth: the tighter your targeting, the better your ads."
+    ],
+    [
+     "2027-03-07",
+     "story",
+     "Poll: when does your Eid campaign start?",
+     "When does your Eid campaign start? This week / Next week / Not planned"
+    ],
+    [
+     "2027-03-08",
+     "carousel",
+     "Lead form or landing page?",
+     "Lead form or landing page? The honest answer for each business."
+    ],
+    [
+     "2027-03-09",
+     "reel",
+     "What to do with your ad budget after Eid",
+     "Eid is over. Don't switch everything off. Do this instead."
+    ],
+    [
+     "2027-03-10",
+     "static",
+     "Eid Mubarak greeting",
+     "Eid Mubarak from AdKaizen. Post on Eid day."
+    ],
+    [
+     "2027-03-10",
+     "li",
+     "What Ramadan and Eid taught us about planning",
+     "Three planning lessons from Ramadan and Eid ads."
+    ],
+    [
+     "2027-03-11",
+     "reel",
+     "Financial year end: use the budget well",
+     "Got ad budget left before 31 March? Don't just burn it."
+    ],
+    [
+     "2027-03-13",
+     "static",
+     "Ad words explained: CPA, conversion, attribution",
+     "CPA, conversion, attribution: the last three, explained."
+    ],
+    [
+     "2027-03-14",
+     "story",
+     "Quiz: what is a conversion?",
+     "Quick quiz: what counts as a conversion?"
+    ],
+    [
+     "2027-03-15",
+     "carousel",
+     "7 hooks to test in your next ad",
+     "Stuck on your first line? 7 hooks to test this week."
+    ],
+    [
+     "2027-03-16",
+     "reel",
+     "Should you show the price in your ad?",
+     "Price in the ad or not? It depends on what you sell."
+    ],
+    [
+     "2027-03-17",
+     "li",
+     "India's financial year end: plan, don't burn",
+     "March budget rush: plan it, don't burn it."
+    ],
+    [
+     "2027-03-18",
+     "reel",
+     "Radius targeting for restaurants and cloud kitchens",
+     "Restaurants: your best customers live 5 km away. Target them."
+    ],
+    [
+     "2027-03-20",
+     "static",
+     "Small changes, every quarter",
+     "13 weeks in a quarter. 13 chances to test one thing."
+    ],
+    [
+     "2027-03-21",
+     "story",
+     "Question box: what should we cover in April?",
+     "What should we cover in April? Tell us here."
+    ],
+    [
+     "2027-03-22",
+     "carousel",
+     "Q1 review template",
+     "Review your first quarter in 20 minutes with this template."
+    ],
+    [
+     "2027-03-23",
+     "reel",
+     "Google Business Profile: 5 quick wins",
+     "Your Google Business Profile is free. Five quick wins this week."
+    ],
+    [
+     "2027-03-24",
+     "li",
+     "How to read a quarterly ad report",
+     "A quarterly ad report should answer three questions."
+    ],
+    [
+     "2027-03-25",
+     "reel",
+     "Compare these 3 numbers every quarter",
+     "Before you plan next quarter, compare these 3 numbers."
+    ],
+    [
+     "2027-03-27",
+     "static",
+     "Same ad, clearer first line",
+     "Same ad. Clearer first line. Which one would you click?"
+    ],
+    [
+     "2027-03-29",
+     "carousel",
+     "Plan your summer intake and summer travel ads",
+     "Summer intake and summer travel: plan your ads from April."
+    ],
+    [
+     "2027-03-30",
+     "reel",
+     "Start Q2 with one test",
+     "Start Q2 with one test, not a new strategy."
+    ],
+    [
+     "2027-03-31",
+     "li",
+     "What to plan for Q2",
+     "Q2 plan in five lines. Here's how we write ours."
+    ]
+   ]
+  }
+ ]
+}
