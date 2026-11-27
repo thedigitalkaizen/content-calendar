@@ -1,0 +1,224 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AdKaizen Instagram Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<style>:root{--bg:#F4F6FB;--card:#fff;--text:#0B1226;--muted:#5B6680;--line:rgba(11,18,38,.09);--royal:#2F6BFF;--em:#10B981;--soft:#EEF3FF;--code:#F7F8FC}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1226;--card:#121A33;--text:#EEF2FF;--muted:#9AA6C6;--line:rgba(255,255,255,.09);--soft:#18234A;--code:#0F1630}}
+:root[data-theme="dark"]{--bg:#0B1226;--card:#121A33;--text:#EEF2FF;--muted:#9AA6C6;--line:rgba(255,255,255,.09);--soft:#18234A;--code:#0F1630}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:15px/1.55 Inter,system-ui,sans-serif;padding:24px 16px 64px}
+.wrap{max-width:920px;margin:0 auto}
+header{background:#0B1226;background-image:radial-gradient(420px 220px at 92% 0%,var(--pc),transparent 70%);color:#fff;border-radius:20px;padding:24px 24px 20px;margin-bottom:16px}
+.lock{display:flex;align-items:center;gap:10px}.lock svg{width:34px;height:34px}.lock b{font:800 20px/1 Sora,sans-serif;letter-spacing:-.03em}.lock b span{color:#7FA3FF}
+.pill{margin-left:auto;font:600 12px Inter;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.12)}
+h1{font:800 26px/1.2 Sora,sans-serif;margin-top:18px;letter-spacing:-.02em}
+.sub{color:#B9C4E4;margin-top:6px;font-size:14px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.facts span{font-size:13px;padding:6px 11px;border-radius:10px;background:rgba(255,255,255,.08)}
+nav{display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;margin-bottom:6px}
+nav a{font:600 13px Inter;padding:8px 13px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+nav a:hover{border-color:var(--royal)}
+h2{font:800 20px/1.25 Sora,sans-serif;margin:26px 0 4px;letter-spacing:-.02em;scroll-margin-top:60px}
+.lead{color:var(--muted);font-size:14px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}
+.f{display:grid;grid-template-columns:200px 1fr auto;gap:14px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.f:first-child{border-top:0;padding-top:2px}
+.f .l{font-weight:600;font-size:14px}
+.f .v{white-space:pre-wrap;font-size:14px;background:var(--code);border:1px solid var(--line);border-radius:10px;padding:9px 12px;word-break:break-word}
+.f .n{display:block;font-size:12.5px;color:var(--muted);margin-top:5px}
+.copy{font:600 12.5px Inter;padding:7px 13px;border-radius:99px;border:0;background:var(--royal);color:#fff;cursor:pointer;white-space:nowrap}
+.copy.done{background:var(--em)}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.im{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
+.im .th{height:120px;border-radius:9px;background:var(--code) center/contain no-repeat;margin-bottom:8px}
+.im b{display:block;font-size:13.5px}.im code{display:block;font-size:11.5px;color:var(--muted);word-break:break-all;margin-top:3px}
+.when{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}
+.when div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.when small{display:block;font:600 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.when b{display:block;font:800 18px/1.3 Sora,sans-serif;margin-top:4px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;border-top:0;background:var(--code)}
+td a{color:var(--royal);text-decoration:none;font-weight:600}
+td input{width:18px;height:18px;accent-color:var(--em)}
+tr.done td{opacity:.5}tr.done td:first-child,tr.done td:last-child{opacity:1}
+.post{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;scroll-margin-top:60px}
+.ph{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-bottom:10px}
+.num{font:700 13px Sora;color:var(--royal);border:1.5px solid var(--royal);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none}
+.theme{font:600 14px Inter;flex:1;min-width:160px}
+.date{font:600 12.5px Inter;padding:4px 10px;border-radius:99px;background:var(--soft);color:var(--royal)}
+.fmt{font:600 11px Inter;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.pb{display:grid;grid-template-columns:1fr 150px;gap:14px}
+.pb.noimg{grid-template-columns:1fr}
+pre{white-space:pre-wrap;font:14px/1.6 Inter,system-ui,sans-serif;background:var(--code);border:1px solid var(--line);border-radius:12px;padding:13px;color:var(--text)}
+.cover img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.cover code{display:block;font-size:11px;color:var(--muted);word-break:break-all;margin-top:5px}
+.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+ul.tips{list-style:none}ul.tips li{position:relative;padding:9px 0 9px 26px;border-top:1px solid var(--line);font-size:14.5px}
+ul.tips li:first-child{border-top:0}ul.tips li:before{content:"";position:absolute;left:4px;top:16px;width:9px;height:9px;border-radius:3px;background:var(--em)}
+.foot{color:var(--muted);font-size:12.5px;text-align:center;margin-top:24px}
+@media(max-width:640px){header{padding:20px 16px}h1{font-size:21px}.f{grid-template-columns:1fr;gap:6px}.f .copy{justify-self:start}.when{grid-template-columns:1fr}.pb{grid-template-columns:1fr}.cover{max-width:180px}th:nth-child(4),td:nth-child(4){display:none}}header{--pc:#E1306C88}</style></head><body><div class="wrap">
+<header><div class="lock"><svg viewBox="0 0 256 256"><path fill="#fff" d="M221.97 95.8A100 100 0 1 1 145.36 31.52L139.81 63.03A68 68 0 1 0 191.9 106.74Z"/><path fill="#10B981" d="M184.3 25.7h34v34h-34z"/></svg><b><span>Ad</span>Kaizen</b><span class="pill">instagram.com/adkaizen</span></div>
+<h1>Instagram: profile, posts and schedule</h1>
+<div class="sub">Everything to set up the profile, then the first 10 posts with dates. Tick each post when it's live; your ticks are saved in this browser.</div>
+<div class="facts"><span>3 posts a week + stories most days</span><span>7:30 PM IST</span><span>Mon 30 Nov → Mon 21 Dec</span></div></header>
+<nav><a href="AdKaizen-LinkedIn.html">LinkedIn</a><a href="AdKaizen-Instagram.html" style="background:var(--royal);border-color:var(--royal);color:#fff">Instagram</a><a href="AdKaizen-Facebook.html">Facebook</a><a href="AdKaizen-X.html">X (Twitter)</a><a href="AdKaizen-YouTube.html">YouTube Shorts</a><a href="AdKaizen-Google-Business.html">Google Business Profile</a></nav>
+<h2 id="profile">1. Update the profile</h2><p class="lead">Fill these in, top to bottom. Use Copy to paste each one.</p>
+<div class="card"><div class="f"><div class="l">Username</div><div><div class="v">adkaizen</div><span class="n">If it's taken, use adkaizen.agency to match LinkedIn.</span></div><button class="copy" data-t="adkaizen">Copy</button></div><div class="f"><div class="l">Account type</div><div><div class="v">Professional → Business</div><span class="n">Settings → Account type and tools.</span></div><button class="copy" data-t="Professional%20%E2%86%92%20Business">Copy</button></div><div class="f"><div class="l">Category</div><div><div class="v">Marketing Agency</div><span class="n">Turn &quot;Display category&quot; on.</span></div><button class="copy" data-t="Marketing%20Agency">Copy</button></div><div class="f"><div class="l">Name (searchable, max 64)</div><div><div class="v">AdKaizen | Meta &amp; Google Ads</div></div><button class="copy" data-t="AdKaizen%20%7C%20Meta%20%26%20Google%20Ads">Copy</button></div><div class="f"><div class="l">Bio (max 150 characters)</div><div><div class="v">Meta &amp; Google Ads for brands in India + GCC 🇮🇳🇦🇪
+Tested changes every week. Growth that compounds.
+👇 Book a free strategy call</div></div><button class="copy" data-t="Meta%20%26%20Google%20Ads%20for%20brands%20in%20India%20%2B%20GCC%20%F0%9F%87%AE%F0%9F%87%B3%F0%9F%87%A6%F0%9F%87%AA%0ATested%20changes%20every%20week.%20Growth%20that%20compounds.%0A%F0%9F%91%87%20Book%20a%20free%20strategy%20call">Copy</button></div><div class="f"><div class="l">Link 1: Free strategy call</div><div><div class="v">https://thedigitalkaizen.github.io/Kaizen/book-a-call/</div><span class="n">Put this one first, it's the one shown on the profile.</span></div><button class="copy" data-t="https%3A%2F%2Fthedigitalkaizen.github.io%2FKaizen%2Fbook-a-call%2F">Copy</button></div><div class="f"><div class="l">Link 2: Website</div><div><div class="v">https://thedigitalkaizen.github.io/Kaizen/</div></div><button class="copy" data-t="https%3A%2F%2Fthedigitalkaizen.github.io%2FKaizen%2F">Copy</button></div><div class="f"><div class="l">Contact: email</div><div><div class="v">Your business email</div><span class="n">Switch to hanif@adkaizen.in once Zoho Mail is set up.</span></div><button class="copy" data-t="Your%20business%20email">Copy</button></div><div class="f"><div class="l">Contact: phone</div><div><div class="v">+91 76664 59020</div><span class="n">Choose WhatsApp as the contact method.</span></div><button class="copy" data-t="%2B91%2076664%2059020">Copy</button></div><div class="f"><div class="l">Action button</div><div><div class="v">Book now → https://thedigitalkaizen.github.io/Kaizen/book-a-call/</div></div><button class="copy" data-t="Book%20now%20%E2%86%92%20https%3A%2F%2Fthedigitalkaizen.github.io%2FKaizen%2Fbook-a-call%2F">Copy</button></div><div class="f"><div class="l">Address</div><div><div class="v">Leave empty</div><span class="n">You serve a region, not one shop.</span></div><button class="copy" data-t="Leave%20empty">Copy</button></div></div>
+<h2 id="images">2. Images to upload</h2><p class="lead">All in <b>Kaizen\kaizen-logo\social-banners\</b>.</p>
+<div class="imgs"><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/profile-pictures/AdKaizen-Instagram-1080.png')"></div><b>Profile picture · 1080×1080</b><code>kaizen-logo\social-banners\profile-pictures\AdKaizen-Instagram-1080.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/1-Meta-Ads.png')"></div><b>Highlight: Meta Ads · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\1-Meta-Ads.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/2-Google-Ads.png')"></div><b>Highlight: Google Ads · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\2-Google-Ads.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/3-SEO.png')"></div><b>Highlight: SEO · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\3-SEO.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/4-Leads.png')"></div><b>Highlight: Leads · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\4-Leads.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/5-Process.png')"></div><b>Highlight: Process · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\5-Process.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/6-About.png')"></div><b>Highlight: About · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\6-About.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/highlight-covers/7-Contact.png')"></div><b>Highlight: Contact · 1080×1920</b><code>kaizen-logo\social-banners\highlight-covers\7-Contact.png</code></div></div>
+<h2 id="when">3. When to post</h2><p class="lead">Monday, Wednesday and Friday evenings, when people scroll after work (6:00 PM in Dubai). Times are a starting point: after 4 weeks, check the platform's insights and move to when your followers are actually online.</p>
+<div class="when"><div><small>How often</small><b>3 posts a week + stories most days</b></div><div><small>Days</small><b>Mon, Wed, Fri</b></div><div><small>Time</small><b>7:30 PM IST</b></div></div>
+<table><thead><tr><th>Done</th><th>Date</th><th>Post</th><th>Format</th></tr></thead><tbody><tr data-i="0"><td><input type="checkbox" aria-label="Posted"></td><td>Mon 30 Nov<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p1">1. One tested change a week</a></td><td>Carousel</td></tr><tr data-i="1"><td><input type="checkbox" aria-label="Posted"></td><td>Wed 2 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p2">2. Cheap leads vs good leads</a></td><td>Carousel</td></tr><tr data-i="2"><td><input type="checkbox" aria-label="Posted"></td><td>Fri 4 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p3">3. Reply to leads fast</a></td><td>Reel</td></tr><tr data-i="3"><td><input type="checkbox" aria-label="Posted"></td><td>Mon 7 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p4">4. Creative fatigue</a></td><td>Carousel</td></tr><tr data-i="4"><td><input type="checkbox" aria-label="Posted"></td><td>Wed 9 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p5">5. Landing page, not homepage</a></td><td>Carousel</td></tr><tr data-i="5"><td><input type="checkbox" aria-label="Posted"></td><td>Fri 11 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p6">6. Fix tracking first</a></td><td>Reel</td></tr><tr data-i="6"><td><input type="checkbox" aria-label="Posted"></td><td>Mon 14 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p7">7. Broad targeting + better creative</a></td><td>Carousel</td></tr><tr data-i="7"><td><input type="checkbox" aria-label="Posted"></td><td>Wed 16 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p8">8. Negative keywords on Google</a></td><td>Carousel</td></tr><tr data-i="8"><td><input type="checkbox" aria-label="Posted"></td><td>Fri 18 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p9">9. Plan around your season</a></td><td>Carousel</td></tr><tr data-i="9"><td><input type="checkbox" aria-label="Posted"></td><td>Mon 21 Dec<br><span style="color:var(--muted);font-size:12.5px">7:30 PM IST</span></td><td><a href="#p10">10. Free strategy call offer</a></td><td>Carousel</td></tr></tbody></table>
+<h2 id="posts">4. What to post</h2><p class="lead">Ready to copy. Every claim is about how AdKaizen works, with no made-up results.</p>
+<div class="post" id="p1"><div class="ph"><span class="num">1</span><span class="theme">One tested change a week · ★ pin this</span><span class="date">Mon 30 Nov, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Your ads don't need a rebuild.
+2. They need one tested change a week.
+3. Step 1: Find the biggest leak (creative, audience, page, follow-up)
+4. Step 2: Test one fix for 7 days
+5. Step 3: Keep the winner. Drop the loser.
+6. 12 weeks = 12 improvements stacked. That's Kaizen.
+
+Caption:
+Results dipped? Don't start from zero. Start from what's working and improve one thing at a time. 🔁
+
+Save this for the next time you're tempted to rebuild everything.
+
+Follow @adkaizen for one ad fix a week.
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Your%20ads%20don't%20need%20a%20rebuild.%0A2.%20They%20need%20one%20tested%20change%20a%20week.%0A3.%20Step%201%3A%20Find%20the%20biggest%20leak%20(creative%2C%20audience%2C%20page%2C%20follow-up)%0A4.%20Step%202%3A%20Test%20one%20fix%20for%207%20days%0A5.%20Step%203%3A%20Keep%20the%20winner.%20Drop%20the%20loser.%0A6.%2012%20weeks%20%3D%2012%20improvements%20stacked.%20That's%20Kaizen.%0A%0ACaption%3A%0AResults%20dipped%3F%20Don't%20start%20from%20zero.%20Start%20from%20what's%20working%20and%20improve%20one%20thing%20at%20a%20time.%20%F0%9F%94%81%0A%0ASave%20this%20for%20the%20next%20time%20you're%20tempted%20to%20rebuild%20everything.%0A%0AFollow%20%40adkaizen%20for%20one%20ad%20fix%20a%20week.%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/01-one-test-a-week/slide-1.png" alt="One tested change a week cover" loading="lazy"><code>instagram-carousels\01-one-test-a-week\</code></div></div></div><div class="post" id="p2"><div class="ph"><span class="num">2</span><span class="theme">Cheap leads vs good leads</span><span class="date">Wed 2 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Cheap leads are lying to you.
+2. Low cost per lead ≠ more customers
+3. One-tap forms + loose targeting = leads who never answer
+4. Track this instead: cost per QUALIFIED lead
+5. And this: cost per booked call
+6. Pay a little more for leads who actually pick up.
+
+Caption:
+The cheapest lead is the one that turns into a customer, not the one with the smallest number next to it.
+
+Which one does your report show? 👇
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Cheap%20leads%20are%20lying%20to%20you.%0A2.%20Low%20cost%20per%20lead%20%E2%89%A0%20more%20customers%0A3.%20One-tap%20forms%20%2B%20loose%20targeting%20%3D%20leads%20who%20never%20answer%0A4.%20Track%20this%20instead%3A%20cost%20per%20QUALIFIED%20lead%0A5.%20And%20this%3A%20cost%20per%20booked%20call%0A6.%20Pay%20a%20little%20more%20for%20leads%20who%20actually%20pick%20up.%0A%0ACaption%3A%0AThe%20cheapest%20lead%20is%20the%20one%20that%20turns%20into%20a%20customer%2C%20not%20the%20one%20with%20the%20smallest%20number%20next%20to%20it.%0A%0AWhich%20one%20does%20your%20report%20show%3F%20%F0%9F%91%87%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/02-cheap-leads/slide-1.png" alt="Cheap leads vs good leads cover" loading="lazy"><code>instagram-carousels\02-cheap-leads\</code></div></div></div><div class="post" id="p3"><div class="ph"><span class="num">3</span><span class="theme">Reply to leads fast</span><span class="date">Fri 4 Dec, 7:30 PM IST</span><span class="fmt">Reel</span></div>
+<div class="pb"><div><pre>Reel idea (15–20s):
+0–3s: On-screen text &quot;POV: you replied to your new lead the next morning&quot; + phone showing &quot;Thanks, already booked with someone else 🙂&quot;
+3–10s: &quot;They filled your form at 9:40pm. Someone else replied at 9:42.&quot;
+10–17s: &quot;Fix: instant WhatsApp reply + alert to your phone. Call within 5 minutes.&quot;
+17–20s: &quot;Follow for more lead fixes.&quot;
+
+Caption:
+You paid for that lead. Don't let it go cold overnight. ⏱️
+
+We set up instant replies for every client. Want to know how? DM us &quot;FAST&quot;.
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Reel%20idea%20(15%E2%80%9320s)%3A%0A0%E2%80%933s%3A%20On-screen%20text%20%22POV%3A%20you%20replied%20to%20your%20new%20lead%20the%20next%20morning%22%20%2B%20phone%20showing%20%22Thanks%2C%20already%20booked%20with%20someone%20else%20%F0%9F%99%82%22%0A3%E2%80%9310s%3A%20%22They%20filled%20your%20form%20at%209%3A40pm.%20Someone%20else%20replied%20at%209%3A42.%22%0A10%E2%80%9317s%3A%20%22Fix%3A%20instant%20WhatsApp%20reply%20%2B%20alert%20to%20your%20phone.%20Call%20within%205%20minutes.%22%0A17%E2%80%9320s%3A%20%22Follow%20for%20more%20lead%20fixes.%22%0A%0ACaption%3A%0AYou%20paid%20for%20that%20lead.%20Don't%20let%20it%20go%20cold%20overnight.%20%E2%8F%B1%EF%B8%8F%0A%0AWe%20set%20up%20instant%20replies%20for%20every%20client.%20Want%20to%20know%20how%3F%20DM%20us%20%22FAST%22.%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Film this as a Reel, or post this carousel instead:</span><img src="../kaizen-logo/social-banners/instagram-carousels/09-reply-fast/slide-1.png" alt="Reply to leads fast cover" loading="lazy"><code>instagram-carousels\09-reply-fast\</code></div></div></div><div class="post" id="p4"><div class="ph"><span class="num">4</span><span class="theme">Creative fatigue</span><span class="date">Mon 7 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Your best ad is dying. Here's how to tell.
+2. Sign 1: Frequency keeps climbing
+3. Sign 2: Click-through rate keeps sliding
+4. Sign 3: Cost per lead rises with no other change
+5. Fix: new hooks on the same winning offer
+6. Ship one new creative every week.
+
+Caption:
+Ads don't fail suddenly. They fade. Catch it early and keep your cost per lead steady. 📉
+
+Save this checklist.
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Your%20best%20ad%20is%20dying.%20Here's%20how%20to%20tell.%0A2.%20Sign%201%3A%20Frequency%20keeps%20climbing%0A3.%20Sign%202%3A%20Click-through%20rate%20keeps%20sliding%0A4.%20Sign%203%3A%20Cost%20per%20lead%20rises%20with%20no%20other%20change%0A5.%20Fix%3A%20new%20hooks%20on%20the%20same%20winning%20offer%0A6.%20Ship%20one%20new%20creative%20every%20week.%0A%0ACaption%3A%0AAds%20don't%20fail%20suddenly.%20They%20fade.%20Catch%20it%20early%20and%20keep%20your%20cost%20per%20lead%20steady.%20%F0%9F%93%89%0A%0ASave%20this%20checklist.%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/03-dying-ad/slide-1.png" alt="Creative fatigue cover" loading="lazy"><code>instagram-carousels\03-dying-ad\</code></div></div></div><div class="post" id="p5"><div class="ph"><span class="num">5</span><span class="theme">Landing page, not homepage</span><span class="date">Wed 9 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Stop sending ads to your homepage.
+2. Your homepage talks to everyone.
+3. Your ad visitor wants ONE thing.
+4. Same promise as the ad ✅
+5. One button (call / WhatsApp / form) ✅
+6. Proof next to the button ✅
+7. Nothing else to click ✅
+
+Caption:
+Same budget. Same ads. Better page. Often the fastest win in an account.
+
+Where do your ads land? Tell us below 👇
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Stop%20sending%20ads%20to%20your%20homepage.%0A2.%20Your%20homepage%20talks%20to%20everyone.%0A3.%20Your%20ad%20visitor%20wants%20ONE%20thing.%0A4.%20Same%20promise%20as%20the%20ad%20%E2%9C%85%0A5.%20One%20button%20(call%20%2F%20WhatsApp%20%2F%20form)%20%E2%9C%85%0A6.%20Proof%20next%20to%20the%20button%20%E2%9C%85%0A7.%20Nothing%20else%20to%20click%20%E2%9C%85%0A%0ACaption%3A%0ASame%20budget.%20Same%20ads.%20Better%20page.%20Often%20the%20fastest%20win%20in%20an%20account.%0A%0AWhere%20do%20your%20ads%20land%3F%20Tell%20us%20below%20%F0%9F%91%87%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/04-landing-page/slide-1.png" alt="Landing page, not homepage cover" loading="lazy"><code>instagram-carousels\04-landing-page\</code></div></div></div><div class="post" id="p6"><div class="ph"><span class="num">6</span><span class="theme">Fix tracking first</span><span class="date">Fri 11 Dec, 7:30 PM IST</span><span class="fmt">Reel</span></div>
+<div class="pb"><div><pre>Reel idea (talking head, 20s):
+0–3s: &quot;If you can't tell which ad brought the sale, you're not scaling. You're guessing.&quot;
+3–12s: Quick checklist on screen: Pixel ✓ Conversions API ✓ GA4 ✓ Lead source in CRM ✓
+12–18s: &quot;Fix this before you add a single rupee of budget.&quot;
+18–20s: &quot;Follow @adkaizen.&quot;
+
+Caption:
+Tracking is the boring part. It's also what decides if more budget makes more money. 📊
+
+Comment &quot;CHECK&quot; and we'll send you our tracking checklist.
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Reel%20idea%20(talking%20head%2C%2020s)%3A%0A0%E2%80%933s%3A%20%22If%20you%20can't%20tell%20which%20ad%20brought%20the%20sale%2C%20you're%20not%20scaling.%20You're%20guessing.%22%0A3%E2%80%9312s%3A%20Quick%20checklist%20on%20screen%3A%20Pixel%20%E2%9C%93%20Conversions%20API%20%E2%9C%93%20GA4%20%E2%9C%93%20Lead%20source%20in%20CRM%20%E2%9C%93%0A12%E2%80%9318s%3A%20%22Fix%20this%20before%20you%20add%20a%20single%20rupee%20of%20budget.%22%0A18%E2%80%9320s%3A%20%22Follow%20%40adkaizen.%22%0A%0ACaption%3A%0ATracking%20is%20the%20boring%20part.%20It's%20also%20what%20decides%20if%20more%20budget%20makes%20more%20money.%20%F0%9F%93%8A%0A%0AComment%20%22CHECK%22%20and%20we'll%20send%20you%20our%20tracking%20checklist.%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Film this as a Reel, or post this carousel instead:</span><img src="../kaizen-logo/social-banners/instagram-carousels/10-fix-tracking/slide-1.png" alt="Fix tracking first cover" loading="lazy"><code>instagram-carousels\10-fix-tracking\</code></div></div></div><div class="post" id="p7"><div class="ph"><span class="num">7</span><span class="theme">Broad targeting + better creative</span><span class="date">Mon 14 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. The best targeting on Meta today? A better ad.
+2. Old way: 30 tiny interest audiences
+3. New way: broad audience + clear creative
+4. Call out your customer in line one: &quot;Planning a UK master's for September?&quot;
+5. Test 3–4 angles. Let the algorithm find who responds.
+6. Your ad IS your targeting.
+
+Caption:
+Stop over-targeting. Start writing ads your ideal customer can't scroll past. 🎯
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20The%20best%20targeting%20on%20Meta%20today%3F%20A%20better%20ad.%0A2.%20Old%20way%3A%2030%20tiny%20interest%20audiences%0A3.%20New%20way%3A%20broad%20audience%20%2B%20clear%20creative%0A4.%20Call%20out%20your%20customer%20in%20line%20one%3A%20%22Planning%20a%20UK%20master's%20for%20September%3F%22%0A5.%20Test%203%E2%80%934%20angles.%20Let%20the%20algorithm%20find%20who%20responds.%0A6.%20Your%20ad%20IS%20your%20targeting.%0A%0ACaption%3A%0AStop%20over-targeting.%20Start%20writing%20ads%20your%20ideal%20customer%20can't%20scroll%20past.%20%F0%9F%8E%AF%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/05-meta-targeting/slide-1.png" alt="Broad targeting + better creative cover" loading="lazy"><code>instagram-carousels\05-meta-targeting\</code></div></div></div><div class="post" id="p8"><div class="ph"><span class="num">8</span><span class="theme">Negative keywords on Google</span><span class="date">Wed 16 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Your Google Ads might be paying for searches like these 👇
+2. &quot;free …&quot;
+3. &quot;… jobs&quot; / &quot;… salary&quot;
+4. Your competitor's name
+5. Cities you don't serve
+6. Fix: read the search terms report weekly + add negative keywords
+7. Move the money to searches that convert.
+
+Caption:
+Google shows your ads for what people type, not just your keyword list. Check it every week. 🔍
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Your%20Google%20Ads%20might%20be%20paying%20for%20searches%20like%20these%20%F0%9F%91%87%0A2.%20%22free%20%E2%80%A6%22%0A3.%20%22%E2%80%A6%20jobs%22%20%2F%20%22%E2%80%A6%20salary%22%0A4.%20Your%20competitor's%20name%0A5.%20Cities%20you%20don't%20serve%0A6.%20Fix%3A%20read%20the%20search%20terms%20report%20weekly%20%2B%20add%20negative%20keywords%0A7.%20Move%20the%20money%20to%20searches%20that%20convert.%0A%0ACaption%3A%0AGoogle%20shows%20your%20ads%20for%20what%20people%20type%2C%20not%20just%20your%20keyword%20list.%20Check%20it%20every%20week.%20%F0%9F%94%8D%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/06-negative-keywords/slide-1.png" alt="Negative keywords on Google cover" loading="lazy"><code>instagram-carousels\06-negative-keywords\</code></div></div></div><div class="post" id="p9"><div class="ph"><span class="num">9</span><span class="theme">Plan around your season</span><span class="date">Fri 18 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Your busy season is won 6 weeks before it starts.
+2. 6–8 weeks out: build the audience (useful videos, content)
+3. 3–4 weeks out: lead ads + retargeting
+4. Peak: push budget into what's proven
+5. After: follow up everyone who wasn't ready
+6. Intakes. Umrah. Ramadan. Weddings. Plan early.
+
+Caption:
+If your ads start when the season starts, you're paying peak prices to compete with everyone. 📅
+
+When's your season? Comment below.
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Your%20busy%20season%20is%20won%206%20weeks%20before%20it%20starts.%0A2.%206%E2%80%938%20weeks%20out%3A%20build%20the%20audience%20(useful%20videos%2C%20content)%0A3.%203%E2%80%934%20weeks%20out%3A%20lead%20ads%20%2B%20retargeting%0A4.%20Peak%3A%20push%20budget%20into%20what's%20proven%0A5.%20After%3A%20follow%20up%20everyone%20who%20wasn't%20ready%0A6.%20Intakes.%20Umrah.%20Ramadan.%20Weddings.%20Plan%20early.%0A%0ACaption%3A%0AIf%20your%20ads%20start%20when%20the%20season%20starts%2C%20you're%20paying%20peak%20prices%20to%20compete%20with%20everyone.%20%F0%9F%93%85%0A%0AWhen's%20your%20season%3F%20Comment%20below.%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/07-plan-your-season/slide-1.png" alt="Plan around your season cover" loading="lazy"><code>instagram-carousels\07-plan-your-season\</code></div></div></div><div class="post" id="p10"><div class="ph"><span class="num">10</span><span class="theme">Free strategy call offer</span><span class="date">Mon 21 Dec, 7:30 PM IST</span><span class="fmt">Carousel</span></div>
+<div class="pb"><div><pre>Slides:
+1. Want 3 fixes for your ad account, free?
+2. Book a 30-minute strategy call
+3. Show us your account + last month's numbers
+4. We find the biggest leaks
+5. You get the top 3 fixes, in writing
+6. Whether or not you work with us. Link in bio.
+
+Caption:
+No pitch deck. No pressure. Just 3 clear fixes for your ads. 🔧
+
+India &amp; the GCC · Meta Ads · Google Ads · SEO · Lead generation
+Book via the link in bio.
+
+#performancemarketing #metaads #googleads #leadgeneration #digitalmarketing #marketingtips #smallbusinessindia #dubaibusiness #gccbusiness #adkaizen</pre><div class="row"><button class="copy" data-t="Slides%3A%0A1.%20Want%203%20fixes%20for%20your%20ad%20account%2C%20free%3F%0A2.%20Book%20a%2030-minute%20strategy%20call%0A3.%20Show%20us%20your%20account%20%2B%20last%20month's%20numbers%0A4.%20We%20find%20the%20biggest%20leaks%0A5.%20You%20get%20the%20top%203%20fixes%2C%20in%20writing%0A6.%20Whether%20or%20not%20you%20work%20with%20us.%20Link%20in%20bio.%0A%0ACaption%3A%0ANo%20pitch%20deck.%20No%20pressure.%20Just%203%20clear%20fixes%20for%20your%20ads.%20%F0%9F%94%A7%0A%0AIndia%20%26%20the%20GCC%20%C2%B7%20Meta%20Ads%20%C2%B7%20Google%20Ads%20%C2%B7%20SEO%20%C2%B7%20Lead%20generation%0ABook%20via%20the%20link%20in%20bio.%0A%0A%23performancemarketing%20%23metaads%20%23googleads%20%23leadgeneration%20%23digitalmarketing%20%23marketingtips%20%23smallbusinessindia%20%23dubaibusiness%20%23gccbusiness%20%23adkaizen">Copy post</button></div></div><div class="cover"><span style="font-size:12px;color:var(--muted)">Upload all slides from:</span><img src="../kaizen-logo/social-banners/instagram-carousels/08-free-strategy-call/slide-1.png" alt="Free strategy call offer cover" loading="lazy"><code>instagram-carousels\08-free-strategy-call\</code></div></div></div>
+<h2 id="tips">5. Tips for Instagram</h2><div class="card"><ul class="tips"><li><b>Before sharing the profile anywhere</b>, post the first 6 carousels so the grid isn't empty. You can post 2 a day for 3 days, then switch to the calendar.</li><li><b>Pin 3 posts:</b> 01 One test a week, 08 Free strategy call, 02 Cheap leads.</li><li>Highlights need a story first: post a slide as a story, then add it to a highlight and set the cover.</li><li>Stories most days: share each new post to your story, add a poll or question sticker ("What's your cost per lead?").</li><li>Hashtags are included in each caption. Spend 10 minutes after posting replying to comments and to accounts in your niche.</li><li>Connect @adkaizen to the Facebook Page in Meta Business Suite. You can then schedule both from one place.</li></ul></div>
+<h2 id="next">6. After Mon 21 Dec</h2><div class="card">After the 10 carousels, aim for 2 carousels + 1 Reel a week. Turn your best carousel into a Reel (use the YouTube Shorts scripts), and reuse slides as stories.</div>
+<div class="foot">AdKaizen · +91 76664 59020 · Website: thedigitalkaizen.github.io/Kaizen (switch to adkaizen.in once live)</div>
+</div>
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest('.copy');if(!b)return;var t=decodeURIComponent(b.dataset.t);
+function ok(){var o=b.textContent;b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent=o;b.classList.remove('done')},1400)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb(t);ok()})}else{fb(t);ok()}});
+function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+var KEY='adk-guide-instagram',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+document.querySelectorAll('tbody tr').forEach(function(r){var c=r.querySelector('input'),i=r.dataset.i;c.checked=!!st[i];r.classList.toggle('done',c.checked);
+c.addEventListener('change',function(){st[i]=c.checked;r.classList.toggle('done',c.checked);try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}})});
+</script></body></html>

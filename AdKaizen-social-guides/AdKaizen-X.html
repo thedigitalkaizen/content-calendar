@@ -1,0 +1,139 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AdKaizen X (Twitter) Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<style>:root{--bg:#F4F6FB;--card:#fff;--text:#0B1226;--muted:#5B6680;--line:rgba(11,18,38,.09);--royal:#2F6BFF;--em:#10B981;--soft:#EEF3FF;--code:#F7F8FC}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1226;--card:#121A33;--text:#EEF2FF;--muted:#9AA6C6;--line:rgba(255,255,255,.09);--soft:#18234A;--code:#0F1630}}
+:root[data-theme="dark"]{--bg:#0B1226;--card:#121A33;--text:#EEF2FF;--muted:#9AA6C6;--line:rgba(255,255,255,.09);--soft:#18234A;--code:#0F1630}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:15px/1.55 Inter,system-ui,sans-serif;padding:24px 16px 64px}
+.wrap{max-width:920px;margin:0 auto}
+header{background:#0B1226;background-image:radial-gradient(420px 220px at 92% 0%,var(--pc),transparent 70%);color:#fff;border-radius:20px;padding:24px 24px 20px;margin-bottom:16px}
+.lock{display:flex;align-items:center;gap:10px}.lock svg{width:34px;height:34px}.lock b{font:800 20px/1 Sora,sans-serif;letter-spacing:-.03em}.lock b span{color:#7FA3FF}
+.pill{margin-left:auto;font:600 12px Inter;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.12)}
+h1{font:800 26px/1.2 Sora,sans-serif;margin-top:18px;letter-spacing:-.02em}
+.sub{color:#B9C4E4;margin-top:6px;font-size:14px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.facts span{font-size:13px;padding:6px 11px;border-radius:10px;background:rgba(255,255,255,.08)}
+nav{display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;margin-bottom:6px}
+nav a{font:600 13px Inter;padding:8px 13px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+nav a:hover{border-color:var(--royal)}
+h2{font:800 20px/1.25 Sora,sans-serif;margin:26px 0 4px;letter-spacing:-.02em;scroll-margin-top:60px}
+.lead{color:var(--muted);font-size:14px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}
+.f{display:grid;grid-template-columns:200px 1fr auto;gap:14px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.f:first-child{border-top:0;padding-top:2px}
+.f .l{font-weight:600;font-size:14px}
+.f .v{white-space:pre-wrap;font-size:14px;background:var(--code);border:1px solid var(--line);border-radius:10px;padding:9px 12px;word-break:break-word}
+.f .n{display:block;font-size:12.5px;color:var(--muted);margin-top:5px}
+.copy{font:600 12.5px Inter;padding:7px 13px;border-radius:99px;border:0;background:var(--royal);color:#fff;cursor:pointer;white-space:nowrap}
+.copy.done{background:var(--em)}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.im{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
+.im .th{height:120px;border-radius:9px;background:var(--code) center/contain no-repeat;margin-bottom:8px}
+.im b{display:block;font-size:13.5px}.im code{display:block;font-size:11.5px;color:var(--muted);word-break:break-all;margin-top:3px}
+.when{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}
+.when div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.when small{display:block;font:600 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.when b{display:block;font:800 18px/1.3 Sora,sans-serif;margin-top:4px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;border-top:0;background:var(--code)}
+td a{color:var(--royal);text-decoration:none;font-weight:600}
+td input{width:18px;height:18px;accent-color:var(--em)}
+tr.done td{opacity:.5}tr.done td:first-child,tr.done td:last-child{opacity:1}
+.post{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;scroll-margin-top:60px}
+.ph{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-bottom:10px}
+.num{font:700 13px Sora;color:var(--royal);border:1.5px solid var(--royal);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none}
+.theme{font:600 14px Inter;flex:1;min-width:160px}
+.date{font:600 12.5px Inter;padding:4px 10px;border-radius:99px;background:var(--soft);color:var(--royal)}
+.fmt{font:600 11px Inter;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.pb{display:grid;grid-template-columns:1fr 150px;gap:14px}
+.pb.noimg{grid-template-columns:1fr}
+pre{white-space:pre-wrap;font:14px/1.6 Inter,system-ui,sans-serif;background:var(--code);border:1px solid var(--line);border-radius:12px;padding:13px;color:var(--text)}
+.cover img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.cover code{display:block;font-size:11px;color:var(--muted);word-break:break-all;margin-top:5px}
+.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+ul.tips{list-style:none}ul.tips li{position:relative;padding:9px 0 9px 26px;border-top:1px solid var(--line);font-size:14.5px}
+ul.tips li:first-child{border-top:0}ul.tips li:before{content:"";position:absolute;left:4px;top:16px;width:9px;height:9px;border-radius:3px;background:var(--em)}
+.foot{color:var(--muted);font-size:12.5px;text-align:center;margin-top:24px}
+@media(max-width:640px){header{padding:20px 16px}h1{font-size:21px}.f{grid-template-columns:1fr;gap:6px}.f .copy{justify-self:start}.when{grid-template-columns:1fr}.pb{grid-template-columns:1fr}.cover{max-width:180px}th:nth-child(4),td:nth-child(4){display:none}}header{--pc:#0F141988}</style></head><body><div class="wrap">
+<header><div class="lock"><svg viewBox="0 0 256 256"><path fill="#fff" d="M221.97 95.8A100 100 0 1 1 145.36 31.52L139.81 63.03A68 68 0 1 0 191.9 106.74Z"/><path fill="#10B981" d="M184.3 25.7h34v34h-34z"/></svg><b><span>Ad</span>Kaizen</b><span class="pill">x.com/adkaizen</span></div>
+<h1>X (Twitter): profile, posts and schedule</h1>
+<div class="sub">Everything to set up the profile, then the first 10 posts with dates. Tick each post when it's live; your ticks are saved in this browser.</div>
+<div class="facts"><span>1 post every weekday</span><span>9:00 AM IST</span><span>Mon 30 Nov → Fri 11 Dec</span></div></header>
+<nav><a href="AdKaizen-LinkedIn.html">LinkedIn</a><a href="AdKaizen-Instagram.html">Instagram</a><a href="AdKaizen-Facebook.html">Facebook</a><a href="AdKaizen-X.html" style="background:var(--royal);border-color:var(--royal);color:#fff">X (Twitter)</a><a href="AdKaizen-YouTube.html">YouTube Shorts</a><a href="AdKaizen-Google-Business.html">Google Business Profile</a></nav>
+<h2 id="profile">1. Update the profile</h2><p class="lead">Fill these in, top to bottom. Use Copy to paste each one.</p>
+<div class="card"><div class="f"><div class="l">Name</div><div><div class="v">AdKaizen</div></div><button class="copy" data-t="AdKaizen">Copy</button></div><div class="f"><div class="l">Handle</div><div><div class="v">@adkaizen</div><span class="n">If it's taken, try @adkaizen_in or @adkaizenagency.</span></div><button class="copy" data-t="%40adkaizen">Copy</button></div><div class="f"><div class="l">Bio (max 160 characters)</div><div><div class="v">Performance marketing for brands in India &amp; the GCC. Meta Ads, Google Ads, SEO. Tested changes every week. Growth that compounds.</div></div><button class="copy" data-t="Performance%20marketing%20for%20brands%20in%20India%20%26%20the%20GCC.%20Meta%20Ads%2C%20Google%20Ads%2C%20SEO.%20Tested%20changes%20every%20week.%20Growth%20that%20compounds.">Copy</button></div><div class="f"><div class="l">Location</div><div><div class="v">India &amp; GCC</div></div><button class="copy" data-t="India%20%26%20GCC">Copy</button></div><div class="f"><div class="l">Website</div><div><div class="v">https://thedigitalkaizen.github.io/Kaizen/book-a-call/</div><span class="n">Send people straight to the free call.</span></div><button class="copy" data-t="https%3A%2F%2Fthedigitalkaizen.github.io%2FKaizen%2Fbook-a-call%2F">Copy</button></div></div>
+<h2 id="images">2. Images to upload</h2><p class="lead">All in <b>Kaizen\kaizen-logo\social-banners\</b>.</p>
+<div class="imgs"><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/profile-pictures/AdKaizen-X-400.png')"></div><b>Profile photo · 400×400</b><code>kaizen-logo\social-banners\profile-pictures\AdKaizen-X-400.png</code></div><div class="im"><div class="th" style="background-image:url('../kaizen-logo/social-banners/AdKaizen-X-1500x500.png')"></div><b>Header · 1500×500</b><code>kaizen-logo\social-banners\AdKaizen-X-1500x500.png</code></div></div>
+<h2 id="when">3. When to post</h2><p class="lead">Weekday mornings. X moves fast, so short and often beats long and rare. Times are a starting point: after 4 weeks, check the platform's insights and move to when your followers are actually online.</p>
+<div class="when"><div><small>How often</small><b>1 post every weekday</b></div><div><small>Days</small><b>Mon, Tue, Wed, Thu, Fri</b></div><div><small>Time</small><b>9:00 AM IST</b></div></div>
+<table><thead><tr><th>Done</th><th>Date</th><th>Post</th><th>Format</th></tr></thead><tbody><tr data-i="0"><td><input type="checkbox" aria-label="Posted"></td><td>Mon 30 Nov<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p1">1. One tested change a week</a></td><td>Post</td></tr><tr data-i="1"><td><input type="checkbox" aria-label="Posted"></td><td>Tue 1 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p2">2. Cheap leads vs good leads</a></td><td>Post</td></tr><tr data-i="2"><td><input type="checkbox" aria-label="Posted"></td><td>Wed 2 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p3">3. Reply to leads fast</a></td><td>Post</td></tr><tr data-i="3"><td><input type="checkbox" aria-label="Posted"></td><td>Thu 3 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p4">4. Creative fatigue</a></td><td>Post</td></tr><tr data-i="4"><td><input type="checkbox" aria-label="Posted"></td><td>Fri 4 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p5">5. Landing page, not homepage</a></td><td>Post</td></tr><tr data-i="5"><td><input type="checkbox" aria-label="Posted"></td><td>Mon 7 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p6">6. Fix tracking first</a></td><td>Post</td></tr><tr data-i="6"><td><input type="checkbox" aria-label="Posted"></td><td>Tue 8 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p7">7. Broad targeting + better creative</a></td><td>Post</td></tr><tr data-i="7"><td><input type="checkbox" aria-label="Posted"></td><td>Wed 9 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p8">8. Negative keywords on Google</a></td><td>Post</td></tr><tr data-i="8"><td><input type="checkbox" aria-label="Posted"></td><td>Thu 10 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p9">9. Plan around your season</a></td><td>Post</td></tr><tr data-i="9"><td><input type="checkbox" aria-label="Posted"></td><td>Fri 11 Dec<br><span style="color:var(--muted);font-size:12.5px">9:00 AM IST</span></td><td><a href="#p10">10. Free strategy call offer</a></td><td>Post</td></tr></tbody></table>
+<h2 id="posts">4. What to post</h2><p class="lead">Ready to copy. Every claim is about how AdKaizen works, with no made-up results.</p>
+<div class="post" id="p1"><div class="ph"><span class="num">1</span><span class="theme">One tested change a week · ★ pin this</span><span class="date">Mon 30 Nov, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Your ad account doesn't need a rebuild.
+
+It needs one tested change a week.
+
+12 weeks = 12 improvements, stacked.
+
+That's the whole Kaizen method.</pre><div class="row"><button class="copy" data-t="Your%20ad%20account%20doesn't%20need%20a%20rebuild.%0A%0AIt%20needs%20one%20tested%20change%20a%20week.%0A%0A12%20weeks%20%3D%2012%20improvements%2C%20stacked.%0A%0AThat's%20the%20whole%20Kaizen%20method.">Copy post</button></div></div></div></div><div class="post" id="p2"><div class="ph"><span class="num">2</span><span class="theme">Cheap leads vs good leads</span><span class="date">Tue 1 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Cheap leads are the most expensive leads you'll buy.
+
+Stop reporting cost per lead.
+Start reporting cost per lead who actually picks up the phone.</pre><div class="row"><button class="copy" data-t="Cheap%20leads%20are%20the%20most%20expensive%20leads%20you'll%20buy.%0A%0AStop%20reporting%20cost%20per%20lead.%0AStart%20reporting%20cost%20per%20lead%20who%20actually%20picks%20up%20the%20phone.">Copy post</button></div></div></div></div><div class="post" id="p3"><div class="ph"><span class="num">3</span><span class="theme">Reply to leads fast</span><span class="date">Wed 2 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Lead came in at 9:40pm.
+You replied at 10am.
+They booked with whoever replied at 9:42.
+
+Speed to lead is free growth.</pre><div class="row"><button class="copy" data-t="Lead%20came%20in%20at%209%3A40pm.%0AYou%20replied%20at%2010am.%0AThey%20booked%20with%20whoever%20replied%20at%209%3A42.%0A%0ASpeed%20to%20lead%20is%20free%20growth.">Copy post</button></div></div></div></div><div class="post" id="p4"><div class="ph"><span class="num">4</span><span class="theme">Creative fatigue</span><span class="date">Thu 3 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Ads don't die suddenly. They fade.
+
+Frequency ↑
+CTR ↓
+CPL ↑
+
+Ship one new creative a week and you'll rarely notice.</pre><div class="row"><button class="copy" data-t="Ads%20don't%20die%20suddenly.%20They%20fade.%0A%0AFrequency%20%E2%86%91%0ACTR%20%E2%86%93%0ACPL%20%E2%86%91%0A%0AShip%20one%20new%20creative%20a%20week%20and%20you'll%20rarely%20notice.">Copy post</button></div></div></div></div><div class="post" id="p5"><div class="ph"><span class="num">5</span><span class="theme">Landing page, not homepage</span><span class="date">Fri 4 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Your homepage is not a landing page.
+
+Ad traffic wants one promise, one button and one reason to believe you.
+
+Nothing else.</pre><div class="row"><button class="copy" data-t="Your%20homepage%20is%20not%20a%20landing%20page.%0A%0AAd%20traffic%20wants%20one%20promise%2C%20one%20button%20and%20one%20reason%20to%20believe%20you.%0A%0ANothing%20else.">Copy post</button></div></div></div></div><div class="post" id="p6"><div class="ph"><span class="num">6</span><span class="theme">Fix tracking first</span><span class="date">Mon 7 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Scaling without tracking is just spending faster.
+
+Pixel + CAPI, Google conversions, GA4, lead source in the CRM.
+
+Then add budget.</pre><div class="row"><button class="copy" data-t="Scaling%20without%20tracking%20is%20just%20spending%20faster.%0A%0APixel%20%2B%20CAPI%2C%20Google%20conversions%2C%20GA4%2C%20lead%20source%20in%20the%20CRM.%0A%0AThen%20add%20budget.">Copy post</button></div></div></div></div><div class="post" id="p7"><div class="ph"><span class="num">7</span><span class="theme">Broad targeting + better creative</span><span class="date">Tue 8 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Best Meta targeting in 2026: a better ad.
+
+Broad audience.
+First line that calls out your customer.
+3–4 angles.
+
+Let the algorithm do the rest.</pre><div class="row"><button class="copy" data-t="Best%20Meta%20targeting%20in%202026%3A%20a%20better%20ad.%0A%0ABroad%20audience.%0AFirst%20line%20that%20calls%20out%20your%20customer.%0A3%E2%80%934%20angles.%0A%0ALet%20the%20algorithm%20do%20the%20rest.">Copy post</button></div></div></div></div><div class="post" id="p8"><div class="ph"><span class="num">8</span><span class="theme">Negative keywords on Google</span><span class="date">Wed 9 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Open your Google Ads search terms report right now.
+
+Count the &quot;free&quot;, &quot;jobs&quot; and competitor searches you paid for.
+
+That's your first negative keyword list.</pre><div class="row"><button class="copy" data-t="Open%20your%20Google%20Ads%20search%20terms%20report%20right%20now.%0A%0ACount%20the%20%22free%22%2C%20%22jobs%22%20and%20competitor%20searches%20you%20paid%20for.%0A%0AThat's%20your%20first%20negative%20keyword%20list.">Copy post</button></div></div></div></div><div class="post" id="p9"><div class="ph"><span class="num">9</span><span class="theme">Plan around your season</span><span class="date">Thu 10 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Your busy season is won 6 weeks before it starts.
+
+Start ads on day one of the season and you pay peak prices to compete with everyone.</pre><div class="row"><button class="copy" data-t="Your%20busy%20season%20is%20won%206%20weeks%20before%20it%20starts.%0A%0AStart%20ads%20on%20day%20one%20of%20the%20season%20and%20you%20pay%20peak%20prices%20to%20compete%20with%20everyone.">Copy post</button></div></div></div></div><div class="post" id="p10"><div class="ph"><span class="num">10</span><span class="theme">Free strategy call offer</span><span class="date">Fri 11 Dec, 9:00 AM IST</span><span class="fmt">Post</span></div>
+<div class="pb noimg"><div><pre>Free: 30 minutes, 3 fixes for your ad account, in writing.
+
+No pitch. Keep them even if you never hire us.
+
+India &amp; the GCC 👇
+thedigitalkaizen.github.io/Kaizen</pre><div class="row"><button class="copy" data-t="Free%3A%2030%20minutes%2C%203%20fixes%20for%20your%20ad%20account%2C%20in%20writing.%0A%0ANo%20pitch.%20Keep%20them%20even%20if%20you%20never%20hire%20us.%0A%0AIndia%20%26%20the%20GCC%20%F0%9F%91%87%0Athedigitalkaizen.github.io%2FKaizen">Copy post</button></div></div></div></div>
+<h2 id="tips">5. Tips for X (Twitter)</h2><div class="card"><ul class="tips"><li><b>Pin post 1</b> to your profile.</li><li>Keep the link out of the post. If you want clicks, reply to your own post with the website link.</li><li>Posts 2, 6 and 8 also work as short threads: split each point into its own reply.</li><li>Spend 10 minutes a day replying to marketers and founders in India and the GCC. On X, replies grow an account faster than posts.</li></ul></div>
+<h2 id="next">6. After Fri 11 Dec</h2><div class="card">After the 10 drafts, turn each Instagram carousel into a thread (one slide per post) and keep 1 post every weekday.</div>
+<div class="foot">AdKaizen · +91 76664 59020 · Website: thedigitalkaizen.github.io/Kaizen (switch to adkaizen.in once live)</div>
+</div>
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest('.copy');if(!b)return;var t=decodeURIComponent(b.dataset.t);
+function ok(){var o=b.textContent;b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent=o;b.classList.remove('done')},1400)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb(t);ok()})}else{fb(t);ok()}});
+function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+var KEY='adk-guide-x',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+document.querySelectorAll('tbody tr').forEach(function(r){var c=r.querySelector('input'),i=r.dataset.i;c.checked=!!st[i];r.classList.toggle('done',c.checked);
+c.addEventListener('change',function(){st[i]=c.checked;r.classList.toggle('done',c.checked);try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}})});
+</script></body></html>
