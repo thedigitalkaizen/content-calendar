@@ -176,37 +176,51 @@ const FMT = { reel: ['Reel', '#2F6BFF'], static: ['Static post', '#0E9F6E'], car
 const OLDC = '#64748B';
 const DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const day = n => new Date(Date.UTC(2026, 11, n));
-const byDay = {}; N.forEach(x => (byDay[x.d] ||= []).push(x));
+// 3 posts a week (agreed 2026-11-27): Reels Tue & Thu + one Saturday post. Everything else is an optional extra.
+// Research 2026-11-27: Reels win reach for small accounts, carousels win saves/engagement (and LinkedIn PDFs), single images do worst.
+// So: Reels Tue & Thu + a carousel every Saturday. Files are attached per item before any date moves.
+N.forEach(x => { x.file = FILES[x.d]; });
+for (const [i, d, dir] of [[0, 5, '01-one-test-a-week'], [1, 12, '02-cheap-leads']]) {
+  const p = P.ig.posts[i], parts = p.b.split('\n\nCaption:\n');
+  N.push({ d, fmt: 'carousel', time: '12:00 PM', title: THEMES[i], also: 'Facebook, LinkedIn (as PDF document)', hook: p.h,
+    slides: parts[0].replace(/^Slides:\n/, '').split('\n').map(s => s.replace(/^\d+\.\s*/, '')),
+    shoot: 'Done: the slides are made. Post them in order. On LinkedIn, upload them as one PDF document.', caption: parts[1],
+    file: [SB + 'instagram-carousels/' + dir + '/', SB + 'instagram-carousels/' + dir + '/slide-1.png'] });
+}
+N.forEach(x => { if (x.fmt === 'carousel' && x.d === 23) { x.d = 19; x.time = '12:00 PM'; } if (x.fmt === 'carousel' && x.d === 28) { x.d = 26; x.time = '12:00 PM'; } });
+N.sort((a, b) => a.d - b.d);
+const SAT = { 5: 'carousel', 12: 'carousel', 19: 'carousel', 26: 'carousel' };
+N.forEach(x => { x.extra = !(x.fmt === 'reel' || SAT[x.d] === x.fmt); });
+const EXTRA = N.filter(x => x.extra), MAIN = N.filter(x => !x.extra);
+const byDay = {}; MAIN.forEach(x => (byDay[x.d] ||= []).push(x));
 
 // Month grid (Mon-first)
 let grid = ''; const first = (day(1).getUTCDay() + 6) % 7;
 for (let i = 0; i < first; i++) grid += '<div class="cell empty"></div>';
 for (let n = 1; n <= 31; n++) {
   const chips = (byDay[n] || []).map(x => `<span class="chip" style="--c:${FMT[x.fmt][1]}">${FMT[x.fmt][0]}</span>`).join('');
-  const o = (old[n] || []).length;
-  grid += `<a class="cell" href="#d${n}"><span class="dn">${n}</span>${chips}${o ? `<span class="oc">+${o} planned</span>` : ''}</a>`;
+  grid += `<a class="cell" href="#d${n}"><span class="dn">${n}</span>${chips}</a>`;
 }
 
-const counts = Object.fromEntries(Object.keys(FMT).map(f => [f, N.filter(x => x.fmt === f).length]));
+const counts = Object.fromEntries(Object.keys(FMT).map(f => [f, MAIN.filter(x => x.fmt === f).length]));
 
-let list = '';
-for (let n = 1; n <= 31; n++) {
-  const items = byDay[n] || [], o = old[n] || [];
-  const dd = day(n);
-  let h = `<section class="day" id="d${n}"><div class="dh"><b>${DOW[dd.getUTCDay()]} ${n} Dec</b>${!items.length && !o.length ? '<span class="rest">Rest day · reply to comments and DMs</span>' : ''}</div>`;
-  items.forEach((x, j) => {
-    const id = `n${n}-${j}`;
-    const copy = x.fmt === 'story' ? '' : x.caption + '\n\n' + (x.tags || TAGS);
-    h += `<article class="it" data-fmt="${x.fmt}" data-id="${id}" data-date="2026-12-${String(n).padStart(2, '0')}" data-platform="${esc('Instagram' + (x.also ? ', ' + x.also : ''))}" data-title="${esc(FMT[x.fmt][0] + ': ' + x.title)}"><div class="ih"><input type="checkbox" aria-label="Done"><span class="chip" style="--c:${FMT[x.fmt][1]}">${FMT[x.fmt][0]}</span><span class="t">${esc(x.title)}</span><span class="tm">${x.time}${x.time === 'Anytime' ? '' : ' IST'}</span></div>
+function art(x, n, j, ex) {
+  const id = `n${n}-${j}`;
+  const copy = x.fmt === 'story' ? '' : x.caption + '\n\n' + (x.tags || TAGS);
+  return `<article class="it${ex ? ' ex' : ''}" data-fmt="${x.fmt}"${ex ? '' : ` data-id="${id}"`} data-date="2026-12-${String(n).padStart(2, '0')}" data-platform="${esc('Instagram' + (x.also ? ', ' + x.also : ''))}" data-title="${esc(FMT[x.fmt][0] + ': ' + x.title)}"><div class="ih">${ex ? '' : '<input type="checkbox" aria-label="Done">'}<span class="chip" style="--c:${FMT[x.fmt][1]}">${FMT[x.fmt][0]}</span><span class="t">${esc(x.title)}</span>${ex ? `<span class="tm">${x.gcc || /greeting|New Year/i.test(x.title) ? 'Only on ' + n + ' Dec' : 'Any week'}</span>` : `<span class="tm">${x.time}${x.time === 'Anytime' ? '' : ' IST'}</span>`}</div>
 <div class="hook">${esc(x.hook)}</div>
 <div class="bd">${x.script ? `<div class="blk"><small>${x.reelId ? 'Voiceover' : 'Script'}</small><ol>${x.script.map(s => `<li>${esc(s)}</li>`).join('')}</ol></div>` : ''}${x.slides ? `<div class="blk"><small>Slides</small><ol>${x.slides.map(s => `<li>${esc(s)}</li>`).join('')}</ol></div>` : ''}
 <div class="blk"><small>${x.reelId ? 'How to post' : x.fmt === 'reel' ? 'How to film' : 'Design'}</small><p>${esc(x.shoot)}</p></div>
 ${x.fmt === 'story' ? `<div class="blk"><small>Note</small><p>${esc(x.caption)}</p></div>` : `<div class="blk"><small>${x.tags ? 'Caption + hashtags (Instagram, Facebook, LinkedIn)' : 'Caption'}</small><pre>${esc(copy)}</pre><button class="copy" data-t="${encodeURIComponent(copy)}">Copy caption</button></div>${x.yt ? `<div class="blk"><small>YouTube Shorts title</small><pre>${esc(x.yt)}</pre><button class="copy" data-t="${encodeURIComponent(x.yt)}">Copy title</button></div>` : ''}`}
-${x.fmt !== 'story' && FILES[n] ? `<div class="file">${FILES[n][1] ? `<img src="${FILES[n][1]}" alt="">` : '<span class="vid">▶</span>'}<div><small>${x.fmt === 'reel' ? 'Video file' : x.fmt === 'carousel' ? 'Slides folder' : 'Image file'}</small><code>Kaizen\\${FILES[n][0].split('/').join('\\')}</code>${x.fmt === 'carousel' ? `<span class="slides">${fs.readdirSync(K + FILES[n][0]).filter(f => /^slide-\d+\.png$/.test(f)).sort((a, b) => parseInt(a.slice(6)) - parseInt(b.slice(6))).map((f, k) => `<a href="${FILES[n][0]}${f}" target="_blank">Slide ${k + 1}</a>`).join('')}</span>` : x.fmt === 'static' ? `<a href="${FILES[n][0]}" target="_blank">Open image</a>` : ''}${x.fmt === 'reel' ? `<a href="${FILES[n][0]}">Play video</a>${FILES[n][2] ? `<small style="margin-top:8px">Cover image</small><code>Kaizen\\${FILES[n][2].split('/').join('\\')}</code>` : ''}` : ''}</div></div>` : ''}<div class="also"><b>Platforms:</b> Instagram${x.also ? ', ' + esc(x.also) : ''}${x.gcc ? ' · <i>GCC audience</i>' : ''}</div>${x.fmt === 'story' ? '' : '<div class="trk"><input class="lnk" type="url" placeholder="After posting, paste the post link here"><span class="when"></span></div>'}</div></article>`;
-  });
-  if (o.length) h += `<div class="old"><small>Already planned (from the platform guides)</small>${o.map(p => `<div class="orow" data-id="o-${p.k}-${p.i + 1}" data-date="2026-12-${String(n).padStart(2, '0')}" data-platform="${esc(p.name)}" data-title="${esc('Post ' + (p.i + 1) + ': ' + p.theme + ' (' + p.f + ')')}"><input type="checkbox" aria-label="Done"><a href="AdKaizen-social-guides/${p.file}#p${p.i + 1}">${esc(p.name)} · ${p.time} · Post ${p.i + 1}: ${esc(p.theme)} <em>${esc(p.f)}</em></a></div>`).join('')}</div>`;
-  list += h + '</section>';
+${x.fmt !== 'story' && x.file ? `<div class="file">${x.file[1] ? `<img src="${x.file[1]}" alt="">` : '<span class="vid">▶</span>'}<div><small>${x.fmt === 'reel' ? 'Video file' : x.fmt === 'carousel' ? 'Slides folder' : 'Image file'}</small><code>Kaizen\\${x.file[0].split('/').join('\\')}</code>${x.fmt === 'carousel' ? `<span class="slides">${fs.readdirSync(K + x.file[0]).filter(f => /^slide-\d+\.png$/.test(f)).sort((a, b) => parseInt(a.slice(6)) - parseInt(b.slice(6))).map((f, k) => `<a href="${x.file[0]}${f}" target="_blank">Slide ${k + 1}</a>`).join('')}</span>` : x.fmt === 'static' ? `<a href="${x.file[0]}" target="_blank">Open image</a>` : ''}${x.fmt === 'reel' ? `<a href="${x.file[0]}">Play video</a>${x.file[2] ? `<small style="margin-top:8px">Cover image</small><code>Kaizen\\${x.file[2].split('/').join('\\')}</code>` : ''}` : ''}</div></div>` : ''}<div class="also"><b>Platforms:</b> Instagram${x.also ? ', ' + esc(x.also) : ''}${x.gcc ? ' · <i>GCC audience</i>' : ''}</div>${x.fmt === 'story' || ex ? '' : '<div class="trk"><input class="lnk" type="url" placeholder="After posting, paste the post link here"><span class="when"></span></div>'}</div></article>`;
 }
+let list = '';
+for (let n = 1; n <= 31; n++) {
+  const items = byDay[n] || []; if (!items.length) continue;
+  const dd = day(n);
+  list += `<section class="day" id="d${n}"><div class="dh"><b>${DOW[dd.getUTCDay()]} ${n} Dec</b></div>` + items.map((x, j) => art(x, n, j, false)).join('') + '</section>';
+}
+const extras = `<details class="extras"><summary><b>Optional extras</b><span>${EXTRA.length} ready-made pieces for weeks you have more time, plus the 60 drafts in your social guides. Not part of the schedule.</span></summary><div class="exm">` + EXTRA.map(x => art(x, x.d, 'x', true)).join('') + `<p class="exg">More drafts: the <a href="AdKaizen-social-guides/AdKaizen-LinkedIn.html">LinkedIn</a>, <a href="AdKaizen-social-guides/AdKaizen-X.html">X</a>, <a href="AdKaizen-social-guides/AdKaizen-Facebook.html">Facebook</a> and <a href="AdKaizen-social-guides/AdKaizen-Google-Business.html">Google Business</a> guides each have 10 ready posts.</p></div></details>`;
 
 
 // ---------- Next months (plan only, content made the month before) ----------
@@ -300,6 +314,12 @@ pre{white-space:pre-wrap;font:14px/1.6 Inter,system-ui,sans-serif;background:var
 .old a:hover{color:var(--royal)}.old em{font-style:normal;color:var(--muted);font-size:12px}
 .dot{width:7px;height:7px;border-radius:50%;background:${OLDC};flex:none}
 .hide{display:none}
+.extras{margin:26px 0 8px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:4px 18px;box-shadow:var(--shadow-sm)}
+.extras summary{cursor:pointer;padding:14px 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;list-style:none}.extras summary::-webkit-details-marker{display:none}
+.extras summary b{font:800 16px Sora,sans-serif;color:var(--text)}.extras summary b::before{content:"+ ";color:var(--muted)}.extras[open] summary b::before{content:"− "}.extras summary span{font-size:13.5px;color:var(--muted)}
+.exl{display:flex;flex-direction:column;padding-bottom:12px}.exi{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.exi .chip{flex:none;margin-top:2px}
+.exi div{flex:1}.exi b{font:600 14.5px Inter;color:var(--text)}.exi p{font-size:13.5px;color:var(--muted);margin-top:2px}.exi em{font:600 12px Inter;font-style:normal;color:var(--muted);white-space:nowrap}
+.exm{padding-bottom:14px}.exm .it{opacity:.92}.exg{font-size:13.5px;color:var(--muted);margin-top:12px}.nodays{color:var(--muted);font-size:14px}
 /* ---- navigator ---- */
 #months{display:block;overflow:visible;width:100%;margin:0}
 .nav1{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -411,23 +431,20 @@ dialog{border:0;border-radius:22px;padding:0;width:min(560px,calc(100vw - 32px))
 .sync{box-shadow:var(--shadow-sm);display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 14px;padding:10px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:13.5px;color:var(--muted)}.sync b{color:var(--text)}.sync .st{font-weight:600}.sync .st.ok{color:var(--em)}.sync .st.err{color:#E5484D}.bar2{flex:1;min-width:120px;height:8px;border-radius:99px;background:var(--line);overflow:hidden}.bar2 i{display:block;height:100%;width:0;background:var(--em);transition:width .3s}
 .foot{color:var(--muted);font-size:12.5px;text-align:center;margin-top:24px}
 @media(min-width:761px) and (max-width:980px){.ygrid{grid-template-columns:1fr 1fr}}
-@media(max-width:760px){.ygrid{grid-template-columns:1fr}.frow{flex-direction:column}.addbtn{padding:8px 13px;font-size:13px}.months{margin-left:0}.mintro h2{font-size:22px}.rules{grid-template-columns:1fr}.grid{gap:4px}.cell{min-height:64px;padding:5px}.cell .chip{font-size:0;padding:0;width:8px;height:8px;background:var(--c)}.oc{display:none}.dn{font-size:13px}h1{font-size:22px}}
+@media(max-width:760px){.exi{flex-wrap:wrap}.exi em{width:100%;padding-left:2px}.ygrid{grid-template-columns:1fr}.frow{flex-direction:column}.addbtn{padding:8px 13px;font-size:13px}.months{margin-left:0}.mintro h2{font-size:22px}.rules{grid-template-columns:1fr}.grid{gap:4px}.cell{min-height:64px;padding:5px}.cell .chip{font-size:0;padding:0;width:8px;height:8px;background:var(--c)}.oc{display:none}.dn{font-size:13px}h1{font-size:22px}}
 </style></head><body><div class="wrap">
 <div class="top"><div class="in"><div class="lock"><svg viewBox="0 0 256 256"><path fill="#0A1129" d="M221.97 95.8A100 100 0 1 1 145.36 31.52L139.81 63.03A68 68 0 1 0 191.9 106.74Z"/><path fill="#10B981" d="M184.3 25.7h34v34h-34z"/></svg><div><b><span>Ad</span>Kaizen</b><small>Content calendar</small></div></div><button class="addbtn" id="addbtn" type="button">+ Add content</button></div><div class="in"><div class="months" id="months"></div></div></div>
 <div class="sync"><b id="prog">0 of 0 posted</b><span class="bar2"><i id="progbar"></i></span><span class="st" id="syncst">Loading…</span></div>
-<details class="sched" id="sched"><summary>Posting schedule</summary><div class="rules">
-<div><b>Reels · Tue & Thu</b>7:30 PM IST. Same video on Instagram, Facebook Reels and YouTube Shorts.</div>
-<div><b>Carousels · Mon</b>7:30 PM IST. Instagram and Facebook; upload as a PDF on LinkedIn.</div>
-<div><b>Static · Sat</b>12:00 PM IST. One image people save. Greetings go on the day itself.</div>
-<div><b>LinkedIn · Wed</b>10:00 AM IST. A short text post. Add the same as a Google Business update.</div>
-<div><b>Stories · daily</b>Share every post to stories. Sundays get a poll, quiz or question box.</div>
-<div><b>X · weekdays</b>9:00 AM IST. One short tip taken from that week's Reel or carousel.</div>
+<details class="sched" id="sched"><summary>Posting schedule · 3 posts a week</summary><div class="rules">
+<div><b>Reels · Tue & Thu</b>7:30 PM IST. Same video on Instagram, Facebook Reels, YouTube Shorts and LinkedIn.</div>
+<div><b>Carousel · Sat</b>12:00 PM IST. Instagram and Facebook, and LinkedIn as a PDF document. Carousels get the most saves; Reels reach new people.</div>
+<div><b>Optional</b>Share each post to your story. Single images, greetings, story polls and LinkedIn text posts sit in each month's Optional extras list. Use them only when you have time.</div>
 </div></details>
-<div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="reel">Reels</button><button data-f="carousel">Carousels</button><button data-f="static">Static</button><button data-f="li">LinkedIn</button><button data-f="story">Stories</button><button data-f="old">Already planned</button></div>
-<section class="month" data-m="2026-12" data-name="December"><div class="mintro"><div class="eyebrow">Ready to post</div><h2>December 2026</h2><p>New Reels, single-image posts, carousels and stories for every week, plus the 10 posts per platform already in your guides. Tick each item when it's posted and paste the link; ticks sync to the AdKaizen Google Sheet.</p><div class="stats"><span>${counts.reel} Reels</span><span>${counts.static} static posts</span><span>${counts.carousel} new carousels</span><span>${counts.story} story sets</span><span>All images and Reels made</span></div></div>
+<div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="reel">Reels</button><button data-f="carousel">Carousels</button></div>
+<section class="month" data-m="2026-12" data-name="December"><div class="mintro"><div class="eyebrow">Ready to post</div><h2>December 2026</h2><p>3 posts a week: Reels on Tue and Thu, a carousel on Saturday. Everything is made. Tick each one when it's posted.</p></div>
 <div class="grid">${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(d => `<div class="wd">${d}</div>`).join('')}${grid}</div>
 <h3 class="dd">Day by day</h3>
-${list}</section>
+${list}${extras}</section>
 <div id="dyn"></div>
 <section class="month" data-m="overview" data-name="the whole plan"><div id="overview"></div></section>
 <dialog id="adddlg"><form id="addform" method="dialog"><h3>Add content</h3><p class="dsub">Saved to the AdKaizen Google Sheet, so it shows on every device.</p>
@@ -444,4 +461,4 @@ fs.writeFileSync(K + 'AdKaizen-December-2026-calendar.html', html.replace('__APP
 fs.mkdirSync(K + 'content-calendar', { recursive: true });
 fs.writeFileSync(K + 'content-calendar/index.html', html.replace('__APP__', 'app.js?v=' + Date.now().toString(36)));
 fs.copyFileSync(K + 'content-plan-2027.json', K + 'content-calendar/content-plan-2027.json');
-console.log(counts, Object.keys(old).length + ' days with planned posts');
+console.log(counts, MAIN.length + ' dated, ' + EXTRA.length + ' extras');

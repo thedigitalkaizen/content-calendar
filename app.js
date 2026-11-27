@@ -62,7 +62,7 @@
     for (var n = 1; n <= dim; n++) {
       g += '<a class="cell" href="#d' + id + '-' + n + '"><span class="dn">' + n + '</span>' + (by[n] || []).map(function (it) { var F = FM[it.fmt] || FM.other; return '<span class="chip' + (it.custom ? ' you' : '') + '" style="--c:' + F[1] + '">' + F[0] + '</span>'; }).join('') + '</a>';
       var dd = new Date(Y, M - 1, n);
-      l += '<section class="day" id="d' + id + '-' + n + '"><div class="dh"><b>' + DOW[dd.getDay()] + ' ' + n + ' ' + MN[M - 1].slice(0, 3) + '</b>' + (by[n] ? '' : '<span class="rest">Share a story, reply to comments and DMs</span>') + '</div>' + (by[n] || []).map(card).join('') + '</section>';
+      if (by[n]) l += '<section class="day" id="d' + id + '-' + n + '"><div class="dh"><b>' + DOW[dd.getDay()] + ' ' + n + ' ' + MN[M - 1].slice(0, 3) + '</b></div>' + by[n].map(card).join('') + '</section>';
     }
     var stats = ['reel', 'carousel', 'static', 'li', 'story', 'other'].filter(function (f) { return c[f]; }).map(function (f) { return '<span>' + pl(f, c[f]) + '</span>'; }).join('');
     var prev = MN[(M + 10) % 12];
@@ -71,7 +71,16 @@
       (pm && pm.keydates && pm.keydates.length ? '<ul class="keyd">' + pm.keydates.map(function (k) { return '<li>' + esc(k) + '</li>'; }).join('') + '</ul>' : '') +
       '<div class="stats">' + stats + '</div>' +
       (pm ? '<div class="how"><b>Status: planned, not made yet.</b> Ask Claude to “make ' + MN[M - 1] + ' content” in the last week of ' + prev + '. Add your own posts any time with <b>+ Add content</b>.</div>' : '') +
-      '</div><div class="grid">' + ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(function (d) { return '<div class="wd">' + d + '</div>'; }).join('') + g + '</div><h3 class="dd">Day by day</h3>' + l + '</section>';
+      '</div><div class="grid">' + ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(function (d) { return '<div class="wd">' + d + '</div>'; }).join('') + g + '</div><h3 class="dd">Day by day</h3>' + (l || '<p class="nodays">No posts yet. Add one with <b>+ Add content</b>.</p>') + extrasHtml(pm) + '</section>';
+  }
+  function extrasHtml(pm) {
+    var ex = pm && pm.extras; if (!ex || !ex.length) return '';
+    var G = { greeting: ['Greeting', '#94A3B8'] };
+    return '<details class="extras"><summary><b>Optional extras</b><span>' + ex.length + ' ideas for weeks you have more time. Not part of the schedule.</span></summary><div class="exl">' +
+      ex.map(function (e) {
+        var F = G[e[1]] || FM[e[1]] || FM.other, d = +e[0].slice(8), when = e[1] === 'greeting' ? 'Only on ' + d + ' ' + MN[+e[0].slice(5, 7) - 1].slice(0, 3) : 'Any week';
+        return '<div class="exi"><span class="chip" style="--c:' + F[1] + '">' + F[0] + '</span><div><b>' + esc(e[2]) + '</b>' + (e[3] && e[3] !== e[2] ? '<p>' + esc(e[3]) + '</p>' : '') + '</div><em>' + when + '</em></div>';
+      }).join('') + '</div></details>';
   }
   function renderDecCustom() {
     $$('.it.mine.decx').forEach(function (a) { a.remove(); });
@@ -161,7 +170,7 @@
     var kday = {}; keys.forEach(function (k) { if (k.day) kday[k.day] = k.label; });
     var c = {}; its.forEach(function (r) { c[r.dataset.fmt] = (c[r.dataset.fmt] || 0) + 1; });
     var ready = id === '2026-12';
-    var theme = ready ? 'Everything is made: Reels with voiceover, covers, static posts, carousels and captions. Tick each one as you post it.' : pm ? pm.theme + '.' : all.length ? 'Your own posts for this month.' : 'Nothing planned yet. Add posts with + Add content, or ask Claude to plan ' + MN[M - 1] + ' ' + Y + '.';
+    var theme = ready ? 'Everything is made: Reels with voiceover and covers, carousels with slides, and captions. Tick each one as you post it.' : pm ? pm.theme + '.' : all.length ? 'Your own posts for this month.' : 'Nothing planned yet. Add posts with + Add content, or ask Claude to plan ' + MN[M - 1] + ' ' + Y + '.';
     sec.style.setProperty('--a', a[0]); sec.style.setProperty('--a2', a[1]);
     /* hero */
     var hero = '<div class="hero"><div class="hglow"></div><div class="hmain">' +
@@ -170,7 +179,7 @@
       (keys.length ? '<div class="kd">' + keys.map(function (k) { return '<span class="kchip">' + (k.day ? '<b>' + k.day + '<small>' + k.mon + '</small></b>' : '<b class="i">★</b>') + '<em>' + esc(k.label) + '</em></span>'; }).join('') + '</div>' : '') +
       '</div><div class="hside"><div class="ring" data-ring><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="rt"/><circle cx="60" cy="60" r="52" class="rv" pathLength="100" stroke-dasharray="0 100"/></svg><div class="rl"><b>0%</b><small>0 of ' + all.length + ' posted</small></div></div>' +
       '<div class="tiles">' + ['reel', 'carousel', 'static', 'li', 'story', 'other'].filter(function (f) { return c[f]; }).map(function (f) { return '<span class="tile" style="--c:' + FM[f][1] + '"><b>' + c[f] + '</b>' + (c[f] > 1 ? (f === 'story' ? 'Stories' : FM[f][0] + 's') : FM[f][0]) + '</span>'; }).join('') + (olds.length ? '<span class="tile" style="--c:#64748B"><b>' + olds.length + '</b>From guides</span>' : '') + '</div></div>' +
-      (!ready && pm ? '<div class="hnote"><b>Next step:</b> ask Claude to “make ' + MN[M - 1] + ' content” in the last week of ' + MN[(M + 10) % 12] + '. Add your own posts any time with <b>+ Add content</b>.</div>' : '') + '</div>';
+      (!ready && pm ? '<div class="hnote"><b>3 posts a week:</b> Reels on Tue and Thu, a carousel on Saturday. <b>Next step:</b> ask Claude to “make ' + MN[M - 1] + ' content” in the last week of ' + MN[(M + 10) % 12] + '.</div>' : '') + '</div>';
     var oldIntro = sec.querySelector('.mintro, .hero'); if (oldIntro) oldIntro.outerHTML = hero;
     /* grid */
     var by = {}; its.forEach(function (r) { var d = +r.dataset.date.slice(8); (by[d] = by[d] || []).push(r); });
@@ -187,12 +196,14 @@
         (ob[n] ? '<span class="more">+' + ob[n] + ' from guides</span>' : '') + '</a>';
     }
     var grid = sec.querySelector('.grid, .cal');
-    if (grid) grid.outerHTML = '<div class="cal"><div class="cal-h">' + ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(function (d) { return '<span>' + d + '</span>'; }).join('') + '</div><div class="cal-g">' + g + '</div><div class="legend">' + ['reel', 'carousel', 'static', 'li', 'story'].map(function (f) { return '<span style="--c:' + FM[f][1] + '">' + FM[f][0] + '</span>'; }).join('') + '<span class="lk">Key date</span><span class="lt">Today</span></div></div>';
+    if (grid) grid.outerHTML = '<div class="cal"><div class="cal-h">' + ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(function (d) { return '<span>' + d + '</span>'; }).join('') + '</div><div class="cal-g">' + g + '</div><div class="legend">' + ['reel', 'carousel'].map(function (f) { return '<span style="--c:' + FM[f][1] + '">' + FM[f][0] + '</span>'; }).join('') + '<span class="lk">Key date</span><span class="lt">Today</span></div></div>';
     /* week headers in the day list */
     $$('.wkh', sec).forEach(function (x) { x.remove(); });
+    var lastWk = -1;
     $$('.day', sec).forEach(function (d) {
-      var n = +(d.id.split('-').pop().replace('d', '')), dd = new Date(Y, M - 1, n);
-      if (dd.getDay() === 1 || n === 1) {
+      var n = +(d.id.split('-').pop().replace('d', '')), dd = new Date(Y, M - 1, n), wk = Math.floor((n + f0 - 1) / 7);
+      if (wk !== lastWk) {
+        lastWk = wk; n = Math.max(1, n - ((dd.getDay() + 6) % 7)); dd = new Date(Y, M - 1, n);
         var end = Math.min(dim, n + (7 - ((dd.getDay() + 6) % 7)) - 1);
         var h = document.createElement('div'); h.className = 'wkh'; h.innerHTML = '<b>Week of ' + n + ' ' + MN[M - 1].slice(0, 3) + '</b><span>' + n + '–' + end + ' ' + MN[M - 1].slice(0, 3) + '</span>';
         d.parentNode.insertBefore(h, d);
