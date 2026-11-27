@@ -348,7 +348,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('.copy');if
 function ok(){var o=b.textContent;b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent=o;b.classList.remove('done')},1400)}
 if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb(t);ok()})}else{fb(t);ok()}});
 function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
-var SYNC='',KEY='adk-dec-2026',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+var SYNC='https://script.google.com/macros/s/AKfycbwGGZHjyanhgmKzv0FJ85n1bWz_8isMKNSXNwSTTbbBi9uzmLa7yP8L7GQamX2wVSKKwQ/exec',KEY='adk-dec-2026',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
 for(var k in st){if(st[k]===true)st[k]={done:true};else if(!st[k])delete st[k]}
 var rows=[].slice.call(document.querySelectorAll('[data-id]'));
 function stat(t,c){var e=document.getElementById('syncst');e.textContent=t;e.className='st '+(c||'')}
