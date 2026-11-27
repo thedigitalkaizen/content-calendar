@@ -6,7 +6,7 @@
   var KEY = 'adk-dec-2026', CKEY = 'adk-custom';
   var MN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  var FM = { reel: ['Reel', '#E1306C'], carousel: ['Carousel', '#7C5CFF'], static: ['Static post', '#2F6BFF'], li: ['LinkedIn post', '#0A66C2'], story: ['Story', '#F59E0B'], other: ['Other', '#64748B'] };
+  var FM = { reel: ['Reel', '#2F6BFF'], carousel: ['Carousel', '#7C5CFF'], static: ['Static post', '#0E9F6E'], li: ['LinkedIn post', '#475569'], story: ['Story', '#B7791F'], other: ['Other', '#94A3B8'] };
   var PF = { reel: ['7:30 PM IST', 'Instagram, Facebook Reels, YouTube Shorts'], carousel: ['7:30 PM IST', 'Instagram, Facebook, LinkedIn (PDF)'], static: ['12:00 PM IST', 'Instagram, Facebook, LinkedIn'], li: ['10:00 AM IST', 'LinkedIn, Google Business'], story: ['Anytime', 'Instagram + Facebook Stories'], other: ['', ''] };
   var st = {}, custom = [], rows = [], cur = '', curF = 'all', scriptOld = false;
 
@@ -86,8 +86,8 @@
     });
   }
   function renderTabs() {
-    var ids = monthIds();
-    $('#months').innerHTML = '<button data-m="overview">Year view</button>' + ids.map(function (id) { return '<button data-m="' + id + '">' + MN[+id.slice(5) - 1].slice(0, 3) + ' ' + id.slice(2, 4) + '</button>'; }).join('');
+    if (!$('#mstrip')) renderNav();
+    renderStrip();
   }
   function monthRows(id) { var s = $('.month[data-m="' + id + '"]'); return s ? $$('[data-id]', s) : []; }
   function renderOverview() {
@@ -103,7 +103,7 @@
         '<span class="yc">' + ['reel', 'carousel', 'static', 'li', 'story'].filter(function (f) { return c[f]; }).map(function (f) { return '<i style="--c:' + FM[f][1] + '">' + pl(f, c[f]) + '</i>'; }).join('') + '</span>' +
         '<span class="yp"><span class="bar2"><i style="width:' + (r.length ? 100 * n / r.length : 0) + '%"></i></span>' + n + ' / ' + r.length + '</span></button>';
     }).join('');
-    $('#overview').innerHTML = '<div class="mintro"><div class="eyebrow">Year view</div><h2>Content plan, Dec 2026 to Dec 2027</h2><p>Every month at a glance: the theme, key dates, what gets posted and how much is done. Click a month to open it. Add a new month any time by adding content to it with <b>+ Add content</b>.</p><div class="stats"><span>' + tot + ' posts planned</span><span>' + done + ' posted</span><span>' + ids.length + ' months</span></div></div><div class="ygrid">' + cards + '</div>';
+    $('#overview').innerHTML = '<div class="mintro"><div class="eyebrow">Year view</div><h2>Content plan, ' + mName(ids[0]) + ' to ' + mName(ids[ids.length - 1]) + '</h2><p>Every month at a glance: the theme, key dates, what gets posted and how much is done. Click a month to open it. Add a new month any time by adding content to it with <b>+ Add content</b>.</p><div class="stats"><span>' + tot + ' posts planned</span><span>' + done + ' posted</span><span>' + ids.length + ' months</span></div></div><div class="ygrid">' + cards + '</div>';
   }
   function applyFilter() {
     $$('.it').forEach(function (a) { a.classList.toggle('hide', !(curF === 'all' || a.dataset.fmt === curF)); });
@@ -121,11 +121,12 @@
     var mn = mr.filter(function (a) { return (st[a.dataset.id] || {}).done; }).length;
     $('#prog').textContent = mn + ' of ' + mr.length + ' posted ' + (cur === 'overview' ? 'in total' : 'in ' + (sec ? sec.dataset.name : ''));
     $('#progbar').style.width = (mr.length ? 100 * mn / mr.length : 0) + '%';
+    paintRings(); renderStrip();
   }
   function showM(m) {
-    if (!$('.month[data-m="' + m + '"]')) m = '2026-12';
+    if (m !== 'overview' && !$('.month[data-m="' + m + '"]')) { if (/^\d{4}-(0[1-9]|1[0-2])$/.test(m)) { extra[m] = 1; build(); } else m = '2026-12'; }
+    if (m !== 'overview') curY = +m.slice(0, 4);
     $$('.month').forEach(function (x) { x.classList.toggle('on', x.dataset.m === m); });
-    $$('#months button').forEach(function (x) { x.classList.toggle('on', x.dataset.m === m); if (x.dataset.m === m && x.scrollIntoView) x.scrollIntoView({ block: 'nearest', inline: 'center' }); });
     $('#filters').style.display = m === 'overview' ? 'none' : '';
     cur = m; ls('adk-month', m);
     if (m === 'overview') renderOverview();
@@ -133,12 +134,158 @@
   }
   function build() {
     var keep = cur;
-    $('#dyn').innerHTML = monthIds().filter(function (id) { return id !== '2026-12'; }).map(renderMonth).join('');
+    $('#dyn').innerHTML = allIds().filter(function (id) { return id !== '2026-12'; }).map(renderMonth).join('');
     renderDecCustom();
     rows = $$('[data-id]');
+    $$('.month').forEach(decorate);
     renderTabs(); applyFilter();
     if (keep) showM(keep);
   }
+
+
+  /* ---------- month look: hero banner + rich calendar grid ---------- */
+  var ACC = [['#2F5BD3', '#5B7FE8'], ['#4F46E5', '#7C74F0'], ['#0F766E', '#2A9D8F'], ['#1D4ED8', '#4F7BF0'], ['#0E7490', '#2B98B3'], ['#4338CA', '#6D66E0'], ['#047857', '#2E9C78'], ['#1E40AF', '#4B6FD6'], ['#0369A1', '#2E8FC7'], ['#3730A3', '#5F58C9'], ['#115E59', '#2F8580'], ['#1E3A8A', '#4766C2']];
+  var DECKEYS = ['2 Dec: UAE National Day', '16 Dec: Bahrain National Day', '18 Dec: Qatar National Day', '25 Dec: Christmas', '31 Dec: New Year\'s Eve'];
+  function parseKeys(keys, M) {
+    return (keys || []).map(function (k) {
+      var m = /^(\d{1,2}) ([A-Z][a-z]{2})[a-z]*: (.+)$/.exec(k);
+      if (m && MN[M - 1].slice(0, 3) === m[2]) return { day: +m[1], mon: m[2], label: m[3] };
+      return { day: 0, mon: '', label: k };
+    });
+  }
+  function decorate(sec) {
+    var id = sec.dataset.m; if (!/^\d{4}-\d{2}$/.test(id)) return;
+    var Y = +id.slice(0, 4), M = +id.slice(5), pm = planMonth(id), a = ACC[M - 1];
+    var its = $$('.it[data-id]', sec), olds = $$('.orow[data-id]', sec), all = its.concat(olds);
+    var keys = parseKeys(id === '2026-12' ? DECKEYS : pm && pm.keydates, M);
+    var kday = {}; keys.forEach(function (k) { if (k.day) kday[k.day] = k.label; });
+    var c = {}; its.forEach(function (r) { c[r.dataset.fmt] = (c[r.dataset.fmt] || 0) + 1; });
+    var ready = id === '2026-12';
+    var theme = ready ? 'Everything is made: Reels with voiceover, covers, static posts, carousels and captions. Tick each one as you post it.' : pm ? pm.theme + '.' : all.length ? 'Your own posts for this month.' : 'Nothing planned yet. Add posts with + Add content, or ask Claude to plan ' + MN[M - 1] + ' ' + Y + '.';
+    sec.style.setProperty('--a', a[0]); sec.style.setProperty('--a2', a[1]);
+    /* hero */
+    var hero = '<div class="hero"><div class="hglow"></div><div class="hmain">' +
+      '<div class="htag">' + (ready ? '<span class="dot ok"></span>Ready to post' : pm ? '<span class="dot"></span>Planned · to make' : (all.length ? '<span class="dot you"></span>Your content' : '<span class="dot you"></span>Open month')) + '</div>' +
+      '<div class="mbig">' + MN[M - 1] + '<span>' + Y + '</span></div><p class="htheme">' + esc(theme) + '</p>' +
+      (keys.length ? '<div class="kd">' + keys.map(function (k) { return '<span class="kchip">' + (k.day ? '<b>' + k.day + '<small>' + k.mon + '</small></b>' : '<b class="i">★</b>') + '<em>' + esc(k.label) + '</em></span>'; }).join('') + '</div>' : '') +
+      '</div><div class="hside"><div class="ring" data-ring><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="rt"/><circle cx="60" cy="60" r="52" class="rv" pathLength="100" stroke-dasharray="0 100"/></svg><div class="rl"><b>0%</b><small>0 of ' + all.length + ' posted</small></div></div>' +
+      '<div class="tiles">' + ['reel', 'carousel', 'static', 'li', 'story', 'other'].filter(function (f) { return c[f]; }).map(function (f) { return '<span class="tile" style="--c:' + FM[f][1] + '"><b>' + c[f] + '</b>' + (c[f] > 1 ? (f === 'story' ? 'Stories' : FM[f][0] + 's') : FM[f][0]) + '</span>'; }).join('') + (olds.length ? '<span class="tile" style="--c:#64748B"><b>' + olds.length + '</b>From guides</span>' : '') + '</div></div>' +
+      (!ready && pm ? '<div class="hnote"><b>Next step:</b> ask Claude to “make ' + MN[M - 1] + ' content” in the last week of ' + MN[(M + 10) % 12] + '. Add your own posts any time with <b>+ Add content</b>.</div>' : '') + '</div>';
+    var oldIntro = sec.querySelector('.mintro, .hero'); if (oldIntro) oldIntro.outerHTML = hero;
+    /* grid */
+    var by = {}; its.forEach(function (r) { var d = +r.dataset.date.slice(8); (by[d] = by[d] || []).push(r); });
+    var ob = {}; olds.forEach(function (r) { var d = +r.dataset.date.slice(8); ob[d] = (ob[d] || 0) + 1; });
+    var dim = new Date(Y, M, 0).getDate(), f0 = (new Date(Y, M - 1, 1).getDay() + 6) % 7, td = today(), g = '';
+    for (var i = 0; i < f0; i++) g += '<div class="cal-c pad"></div>';
+    for (var n = 1; n <= dim; n++) {
+      var dow = new Date(Y, M - 1, n).getDay(), list = by[n] || [], ds = id + '-' + String(n).padStart(2, '0');
+      var target = id === '2026-12' ? '#d' + n : '#d' + id + '-' + n;
+      g += '<a class="cal-c' + (dow === 0 || dow === 6 ? ' we' : '') + (ds === td ? ' today' : '') + (kday[n] ? ' key' : '') + (list.length ? '' : ' empty') + '" href="' + target + '">' +
+        '<span class="cd"><b>' + n + '</b>' + (kday[n] ? '<i title="' + esc(kday[n]) + '">★ ' + esc(kday[n]) + '</i>' : '') + '</span>' +
+        list.slice(0, 3).map(function (r) { var F = FM[r.dataset.fmt] || FM.other, t = r.dataset.title.replace(/^[^:]+: /, ''); return '<span class="ev' + (r.classList.contains('mine') ? ' you' : '') + '" data-ev="' + esc(r.dataset.id) + '" style="--c:' + F[1] + '"><s>' + F[0] + '</s><u>' + esc(t) + '</u></span>'; }).join('') +
+        (list.length > 3 ? '<span class="more">+' + (list.length - 3) + ' more</span>' : '') +
+        (ob[n] ? '<span class="more">+' + ob[n] + ' from guides</span>' : '') + '</a>';
+    }
+    var grid = sec.querySelector('.grid, .cal');
+    if (grid) grid.outerHTML = '<div class="cal"><div class="cal-h">' + ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(function (d) { return '<span>' + d + '</span>'; }).join('') + '</div><div class="cal-g">' + g + '</div><div class="legend">' + ['reel', 'carousel', 'static', 'li', 'story'].map(function (f) { return '<span style="--c:' + FM[f][1] + '">' + FM[f][0] + '</span>'; }).join('') + '<span class="lk">Key date</span><span class="lt">Today</span></div></div>';
+    /* week headers in the day list */
+    $$('.wkh', sec).forEach(function (x) { x.remove(); });
+    $$('.day', sec).forEach(function (d) {
+      var n = +(d.id.split('-').pop().replace('d', '')), dd = new Date(Y, M - 1, n);
+      if (dd.getDay() === 1 || n === 1) {
+        var end = Math.min(dim, n + (7 - ((dd.getDay() + 6) % 7)) - 1);
+        var h = document.createElement('div'); h.className = 'wkh'; h.innerHTML = '<b>Week of ' + n + ' ' + MN[M - 1].slice(0, 3) + '</b><span>' + n + '–' + end + ' ' + MN[M - 1].slice(0, 3) + '</span>';
+        d.parentNode.insertBefore(h, d);
+      }
+    });
+  }
+  function paintRings() {
+    $$('.month').forEach(function (sec) {
+      var ring = sec.querySelector('[data-ring]'); if (!ring) return;
+      var r = $$('[data-id]', sec), n = r.filter(function (a) { return (st[a.dataset.id] || {}).done; }).length, p = r.length ? Math.round(100 * n / r.length) : 0;
+      ring.querySelector('.rv').setAttribute('stroke-dasharray', p + ' 100'); ring.querySelector('.rv').style.opacity = p ? 1 : 0;
+      ring.querySelector('.rl').innerHTML = '<b>' + p + '%</b><small>' + n + ' of ' + r.length + ' posted</small>';
+      r.forEach(function (a) { var e = sec.querySelector('[data-ev="' + a.dataset.id + '"]'); if (e) e.classList.toggle('done', !!(st[a.dataset.id] || {}).done); });
+    });
+  }
+
+
+  /* ---------- navigator: year switcher, 12-month strip, search ---------- */
+  var curY = 0, extra = {};
+  function allIds() { var s = {}; monthIds().concat(Object.keys(extra)).forEach(function (i) { s[i] = 1; }); return Object.keys(s).sort(); }
+  function yearRange() {
+    var ids = monthIds(), lo = +ids[0].slice(0, 4), hi = Math.max(+ids[ids.length - 1].slice(0, 4), +today().slice(0, 4));
+    return [Math.min(lo, +today().slice(0, 4)), hi + 3];
+  }
+  function monthCount(id) {
+    var r = monthRows(id);
+    if (!r.length && !$('.month[data-m="' + id + '"]')) r = itemsFor(id).map(function (it) { return { dataset: { id: it.id } }; });
+    var n = r.filter(function (a) { return (st[a.dataset.id] || {}).done; }).length;
+    return [r.length, n];
+  }
+  function renderNav() {
+    var tm = today().slice(0, 7);
+    $('#months').innerHTML = '<div class="nav1"><button class="yv" data-m="overview" type="button">▦ Year view</button>' +
+      '<div class="ysw"><button type="button" data-y="-1" aria-label="Previous year">‹</button><b id="ylab"></b><button type="button" data-y="1" aria-label="Next year">›</button></div>' +
+      '<button class="tdy" type="button" data-m="' + tm + '">● This month</button>' +
+      '<div class="srch"><input id="q" type="search" autocomplete="off" placeholder="Search any post, e.g. Ramadan, Eid, ads…" aria-label="Search posts"><div id="qres" hidden></div></div></div>' +
+      '<div class="mstrip" id="mstrip"></div>';
+  }
+  function renderStrip() {
+    if (!$('#mstrip')) return;
+    var tm = today().slice(0, 7), r = yearRange();
+    if (!curY) curY = +(cur && cur !== 'overview' ? cur : tm).slice(0, 4);
+    $('#ylab').textContent = curY;
+    $('[data-y="-1"]').disabled = curY <= r[0]; $('[data-y="1"]').disabled = curY >= r[1];
+    var h = '';
+    for (var m = 1; m <= 12; m++) {
+      var id = curY + '-' + String(m).padStart(2, '0'), c = monthCount(id), a = ACC[m - 1];
+      h += '<button type="button" class="mp' + (id === cur ? ' on' : '') + (c[0] ? '' : ' none') + (id === tm ? ' now' : '') + (id < tm ? ' past' : '') + '" data-m="' + id + '" style="--a:' + a[0] + ';--a2:' + a[1] + '">' +
+        '<b>' + MN[m - 1].slice(0, 3) + '</b><small>' + (c[0] ? (c[1] ? c[1] + '/' + c[0] + ' done' : c[0] + ' posts') : 'Empty') + '</small>' +
+        '<i style="width:' + (c[0] ? 100 * c[1] / c[0] : 0) + '%"></i></button>';
+    }
+    $('#mstrip').innerHTML = h;
+    $('.tdy').classList.toggle('on', cur === tm);
+    $('.yv').classList.toggle('on', cur === 'overview');
+    var on = $('.mp.on'); if (on && on.scrollIntoView && window.innerWidth <= 760) on.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+  function rowText(r) { var h = r.querySelector('.hook'); return (r.dataset.title + ' ' + (h ? h.textContent : '')).toLowerCase(); }
+  function search(q) {
+    var box = $('#qres'); q = q.trim().toLowerCase();
+    if (q.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
+    var words = q.split(/\s+/), hits = rows.filter(function (r) { var t = rowText(r); return words.every(function (w) { return t.indexOf(w) > -1; }); });
+    hits.sort(function (a, b) { return a.dataset.date < b.dataset.date ? -1 : 1; });
+    box.innerHTML = '<div class="qn">' + (hits.length ? hits.length + ' post' + (hits.length > 1 ? 's' : '') + ' found' : 'No posts match “' + esc(q) + '”') + '</div>' +
+      hits.slice(0, 40).map(function (r) {
+        var d = r.dataset.date, F = FM[r.dataset.fmt] || FM.other, t = r.dataset.title.replace(/^[^:]+: /, ''), done = (st[r.dataset.id] || {}).done;
+        return '<button type="button" class="qh' + (done ? ' dn' : '') + '" data-hit="' + esc(r.dataset.id) + '"><span class="qd"><b>' + (+d.slice(8)) + '</b>' + MN[+d.slice(5, 7) - 1].slice(0, 3) + ' ' + d.slice(2, 4) + '</span><span class="qt"><s style="--c:' + F[1] + '">' + (r.dataset.fmt ? F[0] : 'From guides') + '</s>' + esc(t) + '</span>' + (done ? '<em>Posted</em>' : '') + '</button>';
+      }).join('');
+    box.hidden = false;
+  }
+  function goHit(id) {
+    var r = rows.filter(function (a) { return a.dataset.id === id; })[0]; if (!r) return;
+    $('#qres').hidden = true; $('#q').blur();
+    curF = 'all'; $$('#filters button').forEach(function (x) { x.classList.toggle('on', x.dataset.f === 'all'); }); applyFilter();
+    showM(r.closest('.month').dataset.m);
+    r.scrollIntoView({ block: 'center' }); r.classList.remove('flash'); void r.offsetWidth; r.classList.add('flash');
+  }
+  document.addEventListener('click', function (e) {
+    var y = e.target.closest('[data-y]');
+    if (y) {
+      e.stopImmediatePropagation(); curY += +y.dataset.y;
+      var ids = allIds().filter(function (i) { return +i.slice(0, 4) === curY && monthCount(i)[0]; });
+      showM(ids[0] || (curY + '-01')); return;
+    }
+    var h = e.target.closest('[data-hit]'); if (h) { e.stopImmediatePropagation(); goHit(h.dataset.hit); return; }
+    if (!e.target.closest('.srch') && $('#qres')) $('#qres').hidden = true;
+  }, true);
+  document.addEventListener('input', function (e) { if (e.target.id === 'q') search(e.target.value); });
+  document.addEventListener('focusin', function (e) { if (e.target.id === 'q' && e.target.value.trim().length > 1) search(e.target.value); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target.id !== 'q') { if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) { e.preventDefault(); $('#q').focus(); } return; }
+    if (e.key === 'Escape') { e.target.value = ''; search(''); e.target.blur(); }
+    if (e.key === 'Enter') { var f = $('#qres [data-hit]'); if (f) goHit(f.dataset.hit); }
+  });
 
   /* ---------- saving ---------- */
   function post(body) { return fetch(SYNC, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(body) }); }
@@ -217,7 +364,7 @@
   build();
   (function () {
     var t = today().slice(0, 7), q = new URLSearchParams(location.search).get('m'), sv = ls('adk-month');
-    showM(q && $('.month[data-m="' + q + '"]') ? q : $('.month[data-m="' + t + '"]') ? t : sv && $('.month[data-m="' + sv + '"]') ? sv : '2026-12');
+    showM(q && (q === 'overview' || /^\d{4}-(0[1-9]|1[0-2])$/.test(q)) ? q : $('.month[data-m="' + t + '"]') ? t : sv && $('.month[data-m="' + sv + '"]') ? sv : '2026-12');
   })();
   if (SYNC) {
     stat('Syncing…');
